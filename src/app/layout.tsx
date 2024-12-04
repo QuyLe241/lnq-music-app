@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 import "./globals.scss";
 
 const geistSans = localFont({
@@ -26,9 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased`}
       >
+        <AntdRegistry >
         {children}
+        </AntdRegistry>
+        
       </body>
     </html>
   );
