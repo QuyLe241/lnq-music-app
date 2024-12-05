@@ -22,7 +22,14 @@ const Sibar = () => {
           </div>
         </Link>
       </div>
-      <div className="list_menu mt-3" style={{ overflow: "scroll" }}>
+      <div
+        className="list_menu mt-3"
+        style={{
+          overflow: "scroll",
+          height: "calc(100vh - 60px)",
+          width: "100%",
+        }}
+      >
         <div className="item_menu">
           <Link
             href={""}
@@ -73,6 +80,18 @@ const Sibar = () => {
             </div>
             <div className="content">
               <span>Xếp Hạng</span>
+              <span
+                className="ml-1"
+                style={{
+                  fontSize: "12px",
+                  padding: "5px 8px",
+                  fontWeight: 600,
+                  backgroundColor: "#F20505",
+                  borderRadius: "6px",
+                }}
+              >
+                HOT
+              </span>
             </div>
           </Link>
         </div>

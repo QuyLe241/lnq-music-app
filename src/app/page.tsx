@@ -6,10 +6,7 @@ import Footer from "./Components/Footer/Footer";
 
 export default function Home() {
   return (
-    <div
-      className="flex"
-      style={{ height: "100vh", backgroundColor: "#170f23" }}
-    >
+    <div className="flex" style={{ height: "", backgroundColor: "#170f23" }}>
       <div
         className="w-1/5"
         style={{
@@ -19,7 +16,7 @@ export default function Home() {
       >
         <Sibar />
       </div>
-      <div className="w-4/5">
+      <div className="w-4/5" style={{ height: "100vh", overflowY: "scroll" }}>
         <Header />
         <Body />
         <Footer />

@@ -8,7 +8,7 @@ import User from "./User";
 
 const Header = () => {
   return (
-    <div className="container py-3 flex justify-between mt-1">
+    <div className="container pt-3 flex justify-between mt-1">
       <div className="w-2/5 ml-3">
         <form
           action=""
