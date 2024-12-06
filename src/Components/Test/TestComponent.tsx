@@ -1,9 +1,8 @@
-import React from 'react'
+"use client";
+import React from "react";
 
-const TestComponent = () => {
-  return (
-    <div>TestComponent</div>
-  )
-}
+const TestComponent: React.FC = () => {
+  return <div>TestComponent</div>;
+};
 
-export default TestComponent
+export default TestComponent;

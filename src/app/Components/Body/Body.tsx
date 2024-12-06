@@ -14,7 +14,19 @@ import TetImg1 from "../../../Img/tet-img1.png";
 import PlayIcon from "../Icon/PlayIcon";
 import Dots from "../Icon/Dots";
 import HeartIcon from "../Icon/HeartIcon";
+import TrendImg7 from "../../../Img/trend-img7.png";
+import TrendImg8 from "../../../Img/trend-img8.png";
+import TrendImg9 from "../../../Img/trend-img9.png";
+import TrendImg10 from "../../../Img/trend-img10.png";
+import TetImg2 from "../../../Img/tet-img2.png";
+import Top100Img1 from "../../../Img/top100-img1.png";
+import Top100Img2 from "../../../Img/top100-img2.png";
+import Top100Img3 from "../../../Img/top100-img3.png";
+import Top100Img5 from "../../../Img/top100-img5.png";
 import PickleballImg from "../../../Img/pickleball-img.png";
+import RadioImg1 from "../../../Img/radio-img1.png";
+import RadioImg2 from "../../../Img/radio-img2.png";
+import RadioImg3 from "../../../Img/radio-img3.png";
 import Link from "next/link";
 import PlayActiveIcon from "../Icon/PlayActiveIcon";
 // import TrendImg6 from "../../../Img/trend-img6.png";
@@ -60,7 +72,7 @@ const Body: React.FC = () => {
                 >
                   <Image
                     className="img_music"
-                    src={TrendImg1}
+                    src={TrendImg7}
                     style={{ borderRadius: dataStyle.borderRadius1 }}
                     alt=""
                   />
@@ -85,7 +97,7 @@ const Body: React.FC = () => {
                 </div>
                 <div className="content py-2">
                   <p style={{ color: dataStyle.white, opacity: "0.8" }}>
-                    Những ca khúc EDM cực hay mà bạn không thể bỏ lỡ
+                    Những ca khúc giáng sinh cực hay mà bạn không thể bỏ lỡ
                   </p>
                 </div>
               </div>
@@ -366,6 +378,166 @@ const Body: React.FC = () => {
                 <div className="content py-2">
                   <p style={{ color: dataStyle.white, opacity: "0.8" }}>
                     Những ca khúc ballad cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg8}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc hot trend cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg9}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc hot trend cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg10}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc hot trend cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TetImg2}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc hot trend cực hay mà bạn không thể bỏ lỡ
                   </p>
                 </div>
               </div>
@@ -780,6 +952,535 @@ const Body: React.FC = () => {
                 fill="white"
                 classname="heart_icon"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="py-2 mt-2">
+        <div className="">
+          <h3
+            style={{
+              color: dataStyle.white,
+              fontSize: dataStyle.fontsize4,
+              fontWeight: dataStyle.fontWeight2,
+            }}
+          >
+            Chill
+          </h3>
+        </div>
+        <div className="grid mt-3 gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg3}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc chill cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg4}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc chill cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg5}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc chill cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg8}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc chill cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg9}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc chill cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="py-2 mt-2">
+        <div className="">
+          <h3
+            style={{
+              color: dataStyle.white,
+              fontSize: dataStyle.fontsize4,
+              fontWeight: dataStyle.fontWeight2,
+            }}
+          >
+            Top 100
+          </h3>
+        </div>
+        <div className="grid mt-3 gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={Top100Img1}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc nhạc trẻ cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={Top100Img2}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc Âu Mỹ cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={TrendImg1}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc EDM cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={Top100Img3}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những 100 ca khúc cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="">
+            <Link href={""}>
+              <div className="item_music_trend">
+                <div
+                  className="img_musix_trend"
+                  style={{ borderRadius: dataStyle.borderRadius1 }}
+                >
+                  <Image
+                    className="img_music"
+                    src={Top100Img5}
+                    style={{ borderRadius: dataStyle.borderRadius1 }}
+                    alt=""
+                  />
+                  <div className="env_effect">
+                    <div className="style_opacity"></div>
+                    <div className="btn_set_vid flex justify-around items-center">
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_heart"
+                      />
+                      <PlayIcon width="30px" height="30px" fill="white" />
+                      <Dots
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_dots"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="content py-2">
+                  <p style={{ color: dataStyle.white, opacity: "0.8" }}>
+                    Những ca khúc EDM cực hay mà bạn không thể bỏ lỡ
+                  </p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="py-2 mt-2">
+        <div className="py-2">
+          <h3
+            style={{
+              color: dataStyle.white,
+              fontSize: dataStyle.fontsize4,
+              fontWeight: dataStyle.fontWeight2,
+            }}
+          >
+            Radio Nổi Bật
+          </h3>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-3">
+          <div className="">
+            <div className="item_radio w-full" style={{}}>
+              <Link href={""}>
+                <div className="img_radio flex justify-center items-center">
+                  <Image src={RadioImg1} style={{ width: "100%" }} alt="" />
+                </div>
+                <div className="opacity_radio">
+                  <div
+                    className="flex justify-center items-center"
+                    style={{ height: "100%" }}
+                  >
+                    <PlayActiveIcon width="35px" height="35px" fill="white" />
+                  </div>
+                </div>
+                <div className="live_toast">
+                  <span style={{ color: dataStyle.white }}>LIVE</span>
+                </div>
+              </Link>
+            </div>
+            <div className="py-2 mt-1">
+              <div className="title_radio flex justify-center">
+                <span>K-POP</span>
+              </div>
+              <div className="view_radio flex justify-center">
+                <p>1.23Tr đang nghe</p>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <div className="item_radio w-full" style={{}}>
+              <Link href={""}>
+                <div className="img_radio flex justify-center items-center">
+                  <Image src={RadioImg2} style={{ width: "100%" }} alt="" />
+                </div>
+                <div className="opacity_radio">
+                  <div
+                    className="flex justify-center items-center"
+                    style={{ height: "100%" }}
+                  >
+                    <PlayActiveIcon width="35px" height="35px" fill="white" />
+                  </div>
+                </div>
+                <div className="live_toast">
+                  <span style={{ color: dataStyle.white }}>LIVE</span>
+                </div>
+              </Link>
+            </div>
+            <div className="py-2 mt-1">
+              <div className="title_radio flex justify-center">
+                <span>RAP VIỆT</span>
+              </div>
+              <div className="view_radio flex justify-center">
+                <p>13.6Tr đang nghe</p>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <div className="item_radio w-full" style={{}}>
+              <Link href={""}>
+                <div className="img_radio flex justify-center items-center">
+                  <Image src={RadioImg3} style={{ width: "100%" }} alt="" />
+                </div>
+                <div className="opacity_radio">
+                  <div
+                    className="flex justify-center items-center"
+                    style={{ height: "100%" }}
+                  >
+                    <PlayActiveIcon width="35px" height="35px" fill="white" />
+                  </div>
+                </div>
+                <div className="live_toast">
+                  <span style={{ color: dataStyle.white }}>LIVE</span>
+                </div>
+              </Link>
+            </div>
+            <div className="py-2 mt-1">
+              <div className="title_radio flex justify-center">
+                <span>K-POP</span>
+              </div>
+              <div className="view_radio flex justify-center">
+                <p>24.1Tr đang nghe</p>
+              </div>
             </div>
           </div>
         </div>
