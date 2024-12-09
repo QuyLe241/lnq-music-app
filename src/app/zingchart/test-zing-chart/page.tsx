@@ -1,12 +1,9 @@
 "use client";
 import Link from "next/link";
-import React, { Children } from "react";
+import React from "react";
 // import Audio1 from "../../../Audio/testaudio.m4a";
 
-interface TestPageProps {
-  children: React.ReactNode;
-}
-const TestPage: React.FC<TestPageProps> = ({ children }) => {
+const TestPage: React.FC = () => {
   return (
     <div className="text-white">
       <div className="">
