@@ -29,9 +29,122 @@ import RadioImg2 from "../../../Img/radio-img2.png";
 import RadioImg3 from "../../../Img/radio-img3.png";
 import Link from "next/link";
 import PlayActiveIcon from "../Icon/PlayActiveIcon";
+import PlayerMusic from "./PlayerMusic";
 // import TrendImg6 from "../../../Img/trend-img6.png";
 
 const Body: React.FC = () => {
+  const dataSong = [
+    {
+      id: 1,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 1,
+    },
+    {
+      id: 2,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 5,
+    },
+    {
+      id: 3,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 4,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 5,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 6,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 7,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 8,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 9,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 10,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 11,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+    {
+      id: 12,
+      name: "PICKLEBALL",
+      singer: "Đỗ Phú Quí",
+      view: "100Tr lượt xem",
+      like: "2Tr lượt thích",
+      img: PickleballImg,
+      up: 6,
+    },
+  ];
+
+  //  style css
   const dataStyle = {
     white: "white",
     fontsize1: "16px",
@@ -48,7 +161,7 @@ const Body: React.FC = () => {
   };
 
   return (
-    <div className="container px-5" style={{}}>
+    <div className="container px-5" style={{ paddingBottom: "90px" }}>
       <div className="">
         <CarouselHome />
       </div>
@@ -558,402 +671,43 @@ const Body: React.FC = () => {
           </h3>
         </div>
         <div className="grid gap-3 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 py-1 mt-3">
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
+          {dataSong.map((item, index) => {
+            return (
+              <div className="flex item_song" key={index}>
+                <div className="w-1/5 ml-1 rounded-md content_song_left">
+                  <Image
+                    className="rounded-md "
+                    style={{}}
+                    src={item.img}
+                    alt=""
+                  />
+                  <div className="div_opacity">
+                    <button className="btn_active_song">
+                      <PlayActiveIcon width="18px" height="18px" fill="white" />
+                    </button>
+                  </div>
                 </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
+                <div className="w-4/5 pl-2">
+                  <div className="">
+                    <div className="name_song">
+                      <span>{item.name}</span>
+                    </div>
+                    <div className="name_singer">
+                      <p>{item.singer}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
+                <div className="heart flex items-center">
+                  <HeartIcon
+                    width="20px"
+                    height="20px"
+                    fill="white"
+                    classname="heart_icon"
+                  />
                 </div>
               </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
-          <div className="flex item_song">
-            <div className="w-1/5 ml-1 rounded-md content_song_left">
-              <Image
-                className="rounded-md "
-                style={{}}
-                src={PickleballImg}
-                alt=""
-              />
-              <div className="div_opacity">
-                <button className="btn_active_song">
-                  <PlayActiveIcon width="18px" height="18px" fill="white" />
-                </button>
-              </div>
-            </div>
-            <div className="w-4/5 pl-2">
-              <div className="">
-                <div className="name_song">
-                  <span>PICKLEBALL</span>
-                </div>
-                <div className="name_singer">
-                  <p>Đỗ Phú Quí</p>
-                </div>
-              </div>
-            </div>
-            <div className="heart flex items-center">
-              <HeartIcon
-                width="20px"
-                height="20px"
-                fill="white"
-                classname="heart_icon"
-              />
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
       <div className="py-2 mt-2">

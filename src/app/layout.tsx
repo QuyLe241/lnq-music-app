@@ -31,6 +31,7 @@ import Body from "./Components/Body/Body";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Link from "next/link";
+import PlayerMusic from "./Components/Body/PlayerMusic";
 
 export const metadata: Metadata = {
   title: "Music App",
@@ -45,28 +46,35 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased`}>
-        <div
-          className="flex"
-          style={{ height: "", backgroundColor: "#170f23" }}
-        >
+        <div className="">
           <div
-            className="w-1/5"
-            style={{
-              height: "100%",
-              backgroundColor: "rgba(255, 255, 255, 0.05)",
-            }}
+            className="flex"
+            style={{ height: "", backgroundColor: "#170f23" }}
           >
-            <Sibar />
+            <div
+              className="w-1/5"
+              style={{
+                height: "100%",
+                backgroundColor: "rgba(255, 255, 255, 0.05)",
+              }}
+            >
+              <Sibar />
+            </div>
+            <div
+              className="w-4/5"
+              style={{ height: "100vh", overflowY: "scroll" }}
+            >
+              <Header />
+              <AntdRegistry>{children}</AntdRegistry>
+            </div>
+            <div className="player">
+              <div className="">
+                <PlayerMusic />
+              </div>
+            </div>
           </div>
-          <div
-            className="w-4/5"
-            style={{ height: "100vh", overflowY: "scroll" }}
-          >
-            <Header />
-            <AntdRegistry>{children}</AntdRegistry>
-          </div>
+          {/* <Footer /> */}
         </div>
-        {/* <Footer /> */}
       </body>
     </html>
   );

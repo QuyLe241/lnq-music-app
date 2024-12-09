@@ -13,7 +13,7 @@ import { usePathname } from "next/navigation";
 const Sibar = () => {
   const pathName = usePathname();
   return (
-    <div className="">
+    <div className="" style={{ paddingBottom: "90px" }}>
       <div style={{ height: "", backgroundColor: "" }}>
         <div className="home_icom mt-2 flex justify-center">
           <Link href={"/"} className="flex items-center space-x-2">
@@ -36,7 +36,7 @@ const Sibar = () => {
           <div className="item_menu">
             <Link
               href={"/"}
-              className={`item_sibar flex pl-3 items-center${
+              className={`item_sibar flex pl-3 items-center ${
                 pathName === "/" ? " active_sibar" : ""
               }`}
             >
@@ -50,57 +50,8 @@ const Sibar = () => {
           </div>
           <div className="item_menu">
             <Link
-              href={"/usuk"}
-              className={`item_sibar flex pl-3 items-center${
-                pathName === "/usuk" ? "  active_sibar" : ""
-              }`}
-            >
-              <div className="icon">
-                <AventureIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
-              </div>
-              <div className="content">
-                <span>Nhạc USUK</span>
-              </div>
-            </Link>
-          </div>
-          <div className="item_menu">
-            <Link
-              href={"/zingchart"}
-              className={`item_sibar flex pl-3 items-center${
-                pathName === "/zingchart" ? " active_sibar" : ""
-              }`}
-            >
-              <div className="icon">
-                <ZingChartIcon
-                  width={"20px"}
-                  height={"20px"}
-                  fill={"#d8d8d8"}
-                />
-              </div>
-              <div className="content">
-                <span>Zingchart</span>
-              </div>
-            </Link>
-          </div>
-          <div className="item_menu">
-            <Link
-              href={"/nhactet"}
-              className={`item_sibar flex pl-3 items-center${
-                pathName === "/nhactet" ? " active_sibar" : ""
-              }`}
-            >
-              <div className="icon">
-                <RadioIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
-              </div>
-              <div className="content">
-                <span>Nhạc Tết</span>
-              </div>
-            </Link>
-          </div>
-          <div className="item_menu">
-            <Link
               href={"/trending"}
-              className={`item_sibar flex pl-3 items-center${
+              className={`item_sibar flex pl-3 items-center ${
                 pathName === "/trending" ? " active_sibar" : ""
               }`}
             >
@@ -126,8 +77,58 @@ const Sibar = () => {
           </div>
           <div className="item_menu">
             <Link
+              href={"/nhactet"}
+              className={`item_sibar flex pl-3 items-center ${
+                pathName === "/nhactet" ? " active_sibar" : ""
+              }`}
+            >
+              <div className="icon">
+                <RadioIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
+              </div>
+              <div className="content">
+                <span>Nhạc Tết</span>
+              </div>
+            </Link>
+          </div>
+          <div className="item_menu">
+            <Link
+              href={"/usuk"}
+              className={`item_sibar flex pl-3 items-center ${
+                pathName === "/usuk" ? "active_sibar" : ""
+              }`}
+            >
+              <div className="icon">
+                <AventureIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
+              </div>
+              <div className="content">
+                <span>Nhạc USUK</span>
+              </div>
+            </Link>
+          </div>
+          <div className="item_menu">
+            <Link
+              href={"/zingchart"}
+              className={`item_sibar flex pl-3 items-center ${
+                pathName === "/zingchart" ? " active_sibar" : ""
+              }`}
+            >
+              <div className="icon">
+                <ZingChartIcon
+                  width={"20px"}
+                  height={"20px"}
+                  fill={"#d8d8d8"}
+                />
+              </div>
+              <div className="content">
+                <span>Zingchart</span>
+              </div>
+            </Link>
+          </div>
+
+          <div className="item_menu">
+            <Link
               href={"/comming"}
-              className={`item_sibar flex pl-3 items-center${
+              className={`item_sibar flex pl-3 items-center ${
                 pathName === "/comming" ? " active_sibar" : ""
               }`}
             >
@@ -142,7 +143,7 @@ const Sibar = () => {
           <div className="item_menu">
             <Link
               href={"/comming"}
-              className={`item_sibar flex pl-3 items-center${
+              className={`item_sibar flex pl-3 items-center ${
                 pathName === "/comming" ? " active_sibar" : ""
               }`}
             >
@@ -157,7 +158,7 @@ const Sibar = () => {
           <div className="item_menu">
             <Link
               href={"/comming"}
-              className={`item_sibar flex pl-3 items-center${
+              className={`item_sibar flex pl-3 items-center ${
                 pathName === "/comming" ? " active_sibar" : ""
               }`}
             >
