@@ -1,13 +1,7 @@
 "use client";
 import React from "react";
-import TestPage from "./test-zing-chart/page";
-import Link from "next/link";
-import ComponentDefault from "./componentDefault/ComponentDefault";
 
-interface ZingChartPageProps {
-  children: React.ReactNode;
-}
-const ZingChartPage: React.FC<ZingChartPageProps> = () => {
+const ZingChartPage: React.FC = () => {
   return (
     <div className="">
       <div className="">
