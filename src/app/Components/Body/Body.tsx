@@ -30,6 +30,7 @@ import RadioImg3 from "../../../Img/radio-img3.png";
 import Link from "next/link";
 import PlayActiveIcon from "../Icon/PlayActiveIcon";
 import PlayerMusic from "./PlayerMusic";
+import { useRouter } from "next/router";
 // import TrendImg6 from "../../../Img/trend-img6.png";
 
 const Body: React.FC = () => {
@@ -158,6 +159,12 @@ const Body: React.FC = () => {
     borderRadius2: "10px",
     borderRadius3: "15px",
     radius50pt: "50%",
+  };
+
+  // const router = useRouter();
+  const handleNavigate = () => {
+    // navigate.push("/trending");
+    window.location.href = "/trending";
   };
 
   return (
@@ -673,7 +680,13 @@ const Body: React.FC = () => {
         <div className="grid gap-3 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 py-1 mt-3">
           {dataSong.map((item, index) => {
             return (
-              <div className="flex item_song" key={index}>
+              <div
+                className="flex item_song"
+                key={index}
+                onClick={() => {
+                  handleNavigate();
+                }}
+              >
                 <div className="w-1/5 ml-1 rounded-md content_song_left">
                   <Image
                     className="rounded-md "
