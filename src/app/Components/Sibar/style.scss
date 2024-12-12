@@ -1,0 +1,40 @@
+:root {
+    --color-primary: #9b4de0;
+}  
+
+.content_home span{
+    font-size: 30px;
+}
+
+.item_sibar {
+    color: #fff;
+    opacity: 0.8;
+    padding: 15px 0;
+    padding-left: 15px;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.item_sibar span {
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.active_sibar {
+    position: relative;
+    opacity: 1;
+    background-color: hsl(0deg 0% 100% / 10%);
+    transition: all 0.3s;
+}
+.active_sibar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    background-color: #9b4de0;
+    height: 100%;
+}
+
+ 

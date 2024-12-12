@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Toàn bộ thanh cuộn */
+::-webkit-scrollbar {
+  width: 3px; /* Độ rộng của thanh cuộn dọc */
+  height: 0px; /* Độ cao của thanh cuộn ngang */
+  // background-color: #9b4de0;
+}
+
+/* Phần rãnh của thanh cuộn */
+::-webkit-scrollbar-track {
+  background: #f2caf3; /* Màu nền */
+  // background-color: #9b4de0;
+  border-radius: 10px;
+}
+
+/* Phần nút kéo thanh cuộn */
+::-webkit-scrollbar-thumb {
+  // background: #9b4de0; /* Màu của nút kéo */
+  background: #9b4de0;
+  // background-color: #9b4de0;
+  border-radius: 10px; /* Bo góc */
+}
+
+/* Hiệu ứng khi hover trên nút kéo */
+::-webkit-scrollbar-thumb:hover {
+  // background: #9b4de0;
+  background-color: #9b4de0; /* Màu thay đổi khi hover */
+}
+
+.player {
+  background-color: #170f23;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  // width: 100%;
+  margin-top: 90px;
+  // height: 90px;
+  border-top: rgba(255, 255, 255, 0.1) 1px solid;
+}
+
+

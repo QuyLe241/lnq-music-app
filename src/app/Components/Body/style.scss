@@ -1,0 +1,259 @@
+:root {
+    --color-white: #fff;
+    --purle1: rgb(194, 115, 237);
+    --opacity-background1: rgba(255, 255, 255, 0.3);
+    --opacity-background2: rgba(255, 255, 255, 0.5);
+    --opacity-background3: rgba(255, 255, 255, 0.6);
+    --opacity-background4: rgba(0, 0, 0, 0.5);
+    --opacity-background: rgba(0, 0, 0, 0.6);
+    --opacity-background5: rgba(0, 0, 0, 0.3);
+}
+
+.img_musix_trend {
+    position: relative;
+}
+
+.env_effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: none;
+}
+
+.style_opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    opacity: 0.1;
+}
+
+.img_musix_trend .btn_set_vid {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+.btn_heart {
+    padding: 10px;
+    border-radius: 50%;
+   
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+.btn_dots {
+    padding: 8px;
+    border-radius: 50%;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.img_music {
+    transition: all 0.5s;
+}
+.img_musix_trend {
+    overflow: hidden;
+    &:hover {
+        .img_music {
+            transform: scale(1.1);
+            transition: all 0.5s;
+        }
+        .env_effect {
+            display: block;
+        }
+    }
+}
+
+//  bài hát
+.name_song {
+    width: 100%;
+    overflow: hidden;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.name_song span {
+    &:hover {
+        color: var(--purle1);
+    }
+}
+
+.name_singer {
+    width: 100%;
+    overflow: hidden;
+    color: var(--color-white);
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.item_song {
+    position: relative;
+    padding: 12px 3px;
+    border-radius: 5px;
+    &:hover {
+        cursor: pointer;
+        background-color: hsl(0deg 0% 100% / 10%);
+        .heart_icon {
+            display: block;
+        }
+        .div_opacity {
+            display: block;
+        }
+        .btn_active_song {
+            display: block;
+        }
+    }
+}
+
+.heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    // display: none;
+}
+
+.heart_icon {
+    display: none;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 15px;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+    }
+}
+
+.content_song_left {
+    position: relative;
+    // background-color: #ffffff1a;
+}
+
+.btn_active_song {
+    position: absolute;
+    left: 39%;
+    top: 38%;
+    opacity: 0.9;
+    display: none;
+}
+
+.div_opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--opacity-background4);
+    // opacity: ;
+    display: none;
+}
+
+// radio
+.item_radio {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 50%;
+    border: 5px #e35050 solid;
+    position: relative;
+    &:hover {
+        // cursor: pointer;
+        .opacity_radio {
+            display: block;
+        }
+        .img_radio {
+            transform: scale(1.1);
+            
+        }
+    }
+}
+
+.img_radio {
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.opacity_radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--opacity-background5);
+    
+}
+
+.opacity_radio {
+    display: none;
+}
+
+.live_toast {
+    position: absolute;
+    bottom: 8px;
+    left: 38%;
+}
+
+.live_toast span {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #F20505;
+    padding: 3px 10px;
+    border-radius: 6px;
+}
+
+.title_radio span{
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.view_radio p {
+    color: white;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+
+// player
+.btn_style_bg {
+    padding: 8px;
+    border-radius: 50%;
+    &:hover {
+        background-color: hsl(0deg 0% 100% / 20%);
+    }
+}
+
+.btn_style_color {
+    padding: 5px;
+    border-radius: 50%;
+    // border: #fff 2px solid;
+    &:hover {
+        // border: #c273ed 2px solid;
+        // border-color: #c273ed;
+        svg {
+            fill: #c273ed;
+        }
+    }
+}
+
+.time_player_left {
+    position: absolute;
+    left: 0;
+}
+
+.time_player_right {
+    position: absolute;
+    right: 0;
+}

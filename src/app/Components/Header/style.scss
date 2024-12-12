@@ -1,0 +1,112 @@
+.div_btnUpgrade .btn_upgrade .ant-space-item button {
+    &:hover {
+        opacity: 0.9;
+        background-color: #933dde;
+        color: #fff;
+    }
+    font-weight: 700;
+    font-size: 16px;
+    background-color: #9b4de0;
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 80px;
+}
+
+.ant-dropdown .ant-dropdown-menu {
+    background-color: #34224f !important;
+    
+}
+
+.ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-item {
+    padding: 0 !important;
+}
+
+.item_dropdown {
+    &:hover {
+        background-color: hsl(0deg 0% 100% / 10%);
+    }
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.style_modal .ant-modal-close {
+    display: none;
+}
+.style_modal .ant-modal-footer .ant-btn-default {
+    display: none;
+}
+
+.style_modal .ant-modal-footer .ant-btn {
+    background-color: #7a0add;
+    border: none;
+    &:hover {
+        background-color: #3b1260 !important;
+        // box-shadow: 2px 2px 15px 0px #2f2f2f;
+        // opacity: 0.9 !important;
+    }
+    &:active {
+        background-color: #933dde !important;
+    }
+}
+
+.style_modal .ant-modal-content {
+    background-color: #9b4de0 !important;
+    // color: #060a7a;
+}
+
+.style_modal .ant-modal-content .ant-modal-header {
+    background-color: #9b4de0;
+}
+
+.style_modal .ant-modal-content .ant-modal-header .ant-modal-title {
+    color: #ece7e7;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.social_item p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.link_social {
+    opacity: 0.6;
+    transition: all 0.3s;
+    color: black;
+    &:hover {
+        opacity: 1;
+        color: black;
+        // color: #ece7e7;
+    }
+}
+
+// .social_item {
+//     opacity: 0.6;
+//     transition: all 0.3s;
+//     &:hover {
+//         opacity: 1;
+//         // color: #ece7e7;
+//     }
+// }
+
+
+// set theme
+.style_dropdown_theme .ant-space {
+    width: 100%;
+}
+
+.style_dropdown_theme .ant-space-item {
+    width: 100%;
+}
+
+//      modal theme
+.btn_modal_theme{
+    transition: all 0.3s;
+}
+.btn_modal_theme:hover > .arrow_btn_theme {
+    transition: all 0.3s;
+    transform: translateX(20px);
+}
