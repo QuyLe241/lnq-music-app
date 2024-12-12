@@ -759,7 +759,9 @@ const Body: React.FC = () => {
                   <div className="div_opacity">
                     <button
                       className="btn_active_song"
-                      onClick={() => handleNavigate()}
+                      onClick={() => {
+                        handleNavigate();
+                      }}
                     >
                       <PlayActiveIcon width="18px" height="18px" fill="white" />
                     </button>
