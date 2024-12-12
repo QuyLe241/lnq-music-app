@@ -52,35 +52,6 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <Provider store={store}>
           <MusicPlayerProvider>
-            {/* <div className="">
-              <div
-                className="flex"
-                style={{ height: "", backgroundColor: "#170f23" }}
-              >
-                <div
-                  className="w-1/5"
-                  style={{
-                    height: "100%",
-                    backgroundColor: "rgba(255, 255, 255, 0.05)",
-                  }}
-                >
-                  <Sibar />
-                </div>
-                <div
-                  className="w-4/5"
-                  style={{ height: "100vh", overflowY: "scroll" }}
-                >
-                  <Header />
-                  <AntdRegistry>{children}</AntdRegistry>
-                </div>
-                <div className="player">
-                  <div className="">
-                    <PlayerMusic />
-                  </div>
-                </div>
-              </div>
-             
-            </div> */}
             {deBounceResizeWidth > 1100 ? (
               <div className="">
                 <div
