@@ -17,6 +17,7 @@ import { useRouter } from "next/router";
 import useDebounce from "./Components/Hooks/useDebounce";
 import { useEffect, useState } from "react";
 import MobieIU from "./Components/mobieUI/MobieIU";
+import LoadingCheckWidth from "./Components/loading/LoadingCheckWidth";
 
 // export const metadata: Metadata = {
 //   title: "Music App",
@@ -30,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   // const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-  const [windowWidth, setWindowWidth] = useState<number | null>(null);
+  const [windowWidth, setWindowWidth] = useState<number | null>(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -82,6 +83,10 @@ export default function RootLayout({
                     </div>
                   </div>
                 </div>
+              </div>
+            ) : deBounceResizeWidth == 0 ? (
+              <div className="">
+                <LoadingCheckWidth />
               </div>
             ) : (
               <MobieIU />
