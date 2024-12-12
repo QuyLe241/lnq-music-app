@@ -26,7 +26,7 @@ const Trending: React.FC = () => {
     null
   );
   const dataSong = useSelector((state: RootState) => state.dataSongSlice);
-  console.log("data trending", dataSong);
+  // console.log("data trending", dataSong);
 
   // const handleSongClick = (song: (typeof dataSong)[0]) => {
   //   setCurrentSong(song);
@@ -175,7 +175,9 @@ const Trending: React.FC = () => {
                               />
                             </div>
                             <div className="">
-                              <span className="text-white">{item.view}</span>
+                              <span className="text-white opacity-90">
+                                {item.view}
+                              </span>
                             </div>
                           </div>
                           <div className="flex space-x-2">
@@ -187,7 +189,9 @@ const Trending: React.FC = () => {
                               />
                             </div>
                             <div className="">
-                              <span className="text-white">{item.like}</span>
+                              <span className="text-white opacity-90">
+                                {item.like}
+                              </span>
                             </div>
                           </div>
                           {/* <div className="">

@@ -257,3 +257,93 @@
     position: absolute;
     right: 0;
 }
+
+.volume_style::-webkit-appearance {
+    // appearance: none;
+}
+
+// time player style
+.time_player_style::-webkit-slider-thumb  {
+    -webkit-appearance: none; /* Xóa style mặc định */
+    appearance: none;
+    width: 10px; /* Chiều rộng nút kéo */
+    height: 10px; /* Chiều cao nút kéo */
+    // background: #4caf50; /* Màu nền của nút kéo */
+    // background-color: #c273ed;
+    background-color: white;
+    border-radius: 50%; /* Nút kéo tròn */
+    cursor: pointer; /* Con trỏ chuột */
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    &:hover {
+        opacity: 1;
+    }
+}
+.time_player_style::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    // background-color: #c273ed;
+    background-color: white;
+    border-radius: 50%;
+    &:hover {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+//  volume style
+.volume_style::-webkit-slider-thumb  {
+    -webkit-appearance: none; /* Xóa style mặc định */
+    appearance: none;
+    width: 10px; /* Chiều rộng nút kéo */
+    height: 10px; /* Chiều cao nút kéo */
+    // background: #4caf50; /* Màu nền của nút kéo */
+    // background-color: #c273ed;
+    background-color: white;
+    border-radius: 50%; /* Nút kéo tròn */
+    cursor: pointer; /* Con trỏ chuột */
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    &:hover {
+        opacity: 1;
+    }
+}
+.volume_style::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    // background-color: #c273ed;
+    background-color: white;
+    border-radius: 50%;
+    &:hover {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.time_player_style {
+    -webkit-appearance: none;
+    appearance: none;
+    opacity: 0.6;
+    border-radius: 5px;
+    // display: flex;
+    // justify-content: center;
+    height: 3px;
+    // background-color: white;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+.volume_style {
+    -webkit-appearance: none;
+    appearance: none;
+    opacity: 0.6;
+    border-radius: 5px;
+    // display: flex;
+    // justify-content: center;
+    height: 3px;
+    // background-color: white;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}

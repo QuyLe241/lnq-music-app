@@ -14,6 +14,9 @@ import { store } from "./reudx/store";
 import { MusicPlayerProvider } from "@/context/MusicPlayerContext";
 import { useRouter } from "next/router";
 // import { metadata } from "./metadata";
+import useDebounce from "./Components/Hooks/useDebounce";
+import { useEffect, useState } from "react";
+import MobieIU from "./Components/mobieUI/MobieIU";
 
 // export const metadata: Metadata = {
 //   title: "Music App",
@@ -26,6 +29,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const deBounceResizeWidth = useDebounce(windowWidth, 300);
+
   return (
     <html lang="en">
       <head>
@@ -38,7 +52,7 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <Provider store={store}>
           <MusicPlayerProvider>
-            <div className="">
+            {/* <div className="">
               <div
                 className="flex"
                 style={{ height: "", backgroundColor: "#170f23" }}
@@ -65,8 +79,40 @@ export default function RootLayout({
                   </div>
                 </div>
               </div>
-              {/* <Footer /> */}
-            </div>
+             
+            </div> */}
+            {deBounceResizeWidth > 1100 ? (
+              <div className="">
+                <div
+                  className="flex"
+                  style={{ height: "", backgroundColor: "#170f23" }}
+                >
+                  <div
+                    className="w-1/5"
+                    style={{
+                      height: "100%",
+                      backgroundColor: "rgba(255, 255, 255, 0.05)",
+                    }}
+                  >
+                    <Sibar />
+                  </div>
+                  <div
+                    className="w-4/5"
+                    style={{ height: "100vh", overflowY: "scroll" }}
+                  >
+                    <Header />
+                    <AntdRegistry>{children}</AntdRegistry>
+                  </div>
+                  <div className="player">
+                    <div className="">
+                      <PlayerMusic />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <MobieIU />
+            )}
           </MusicPlayerProvider>
         </Provider>
       </body>

@@ -20,12 +20,14 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../reudx/store";
 
 const PlayerMusic: React.FC = () => {
+  // const [volume, setVolume] = useState<number>(100);
   const { currentSong, isPlaying, setIsPlaying, setCurrentSong } =
     useMusicPlayer();
   const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(
     null
   );
   const [currentTime, setCurrentTime] = useState(0);
+  const [timePlayer, setTimePlayer] = useState<number>(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1); // Volume state (0 to 1)
   const [isMuted, setIsMuted] = useState(false); // Mute state
@@ -34,9 +36,13 @@ const PlayerMusic: React.FC = () => {
     (state: RootState) => state.dataSongGoiYSlice
   );
 
-  const combinedSongs = [...dataSong, ...dataSongGoiY];
-  console.log(combinedSongs);
+  // setTimePlayer((currentTime * 100) / duration);
 
+  const combinedSongs = [...dataSong, ...dataSongGoiY];
+  // console.log(combinedSongs);
+
+  const timePlaySong = (timePlayer * 100) / duration;
+  // console.log(timePlaySong);
   useEffect(() => {
     if (audioElement) {
       if (isPlaying) {
@@ -64,7 +70,7 @@ const PlayerMusic: React.FC = () => {
         );
       };
     }
-  }, [isPlaying, currentSong, audioElement]);
+  }, [isPlaying, currentSong, audioElement, timePlayer]);
 
   useEffect(() => {
     if (audioElement) {
@@ -190,7 +196,10 @@ const PlayerMusic: React.FC = () => {
             <div className="flex items-center btn_style_color">
               <button
                 className="hover:text-purple-500 "
-                onClick={handlePlayPause}
+                onClick={() => {
+                  handlePlayPause();
+                }}
+                disabled={isFirstSong}
               >
                 {isPlaying ? (
                   <PauseIcon
@@ -208,7 +217,9 @@ const PlayerMusic: React.FC = () => {
               <button
                 className="btn_style_bg"
                 title="Bài kế tiếp"
-                onClick={handleNextSong}
+                onClick={() => {
+                  handleNextSong();
+                }}
                 disabled={isLastSong}
               >
                 <NextMusicIcon
@@ -236,11 +247,20 @@ const PlayerMusic: React.FC = () => {
               {formatTime(currentTime)}
             </span>
             <input
-              className="w-4/5"
+              className="w-4/5 time_player_style"
               type="range"
               min="0"
               max={duration}
               value={currentTime}
+              style={{
+                background: `linear-gradient(to right, #fff ${(
+                  (currentTime / duration) *
+                  100
+                ).toFixed(2)}%, rgba(255, 255, 255, 0.5) ${(
+                  (currentTime / duration) *
+                  100
+                ).toFixed(2)}%)`,
+              }}
               onChange={(e) => {
                 if (audioElement) {
                   audioElement.currentTime = Number(e.target.value);
@@ -290,12 +310,18 @@ const PlayerMusic: React.FC = () => {
               </div>
               <div className="control_volume flex items-center">
                 <input
+                  className="volume_style"
                   type="range"
                   min="0"
                   max="1"
                   step="0.01"
                   value={volume}
                   onChange={handleVolumeChange}
+                  style={{
+                    background: `linear-gradient(to right, #fff ${
+                      volume * 100
+                    }%, rgba(255, 255, 255, 0.5) ${volume * 100}%)`,
+                  }}
                 />
               </div>
             </div>

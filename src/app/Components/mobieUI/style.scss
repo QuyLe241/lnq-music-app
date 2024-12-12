@@ -1,0 +1,48 @@
+// .video_container {
+//     width: 100vw;
+//     height: 100vh;
+// }
+
+.background_iu {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.container_position {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.title_welcome {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(46, 229, 168);
+}
+
+.content {
+    text-align: center;
+}
+
+.content p {
+    font-weight: 600;
+    color: rgb(217, 222, 220);
+    // opacity: 0.8;
+}
+
+.content p span {
+    color: rgb(91, 226, 238);
+    border-bottom: 1px solid rgb(241, 103, 103);
+}
