@@ -54,6 +54,7 @@
 //   return context;
 // };
 
+"use client";
 import React, { createContext, useState, useContext, ReactNode } from "react";
 import DefaultImg from "../../src/Img/pickleball-img.png";
 
