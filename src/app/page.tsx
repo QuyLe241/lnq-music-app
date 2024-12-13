@@ -6,13 +6,15 @@ import Footer from "./Components/Footer/Footer";
 import { store } from "./reudx/store";
 import { Provider } from "react-redux";
 import { MusicPlayerProvider } from "@/context/MusicPlayerContext";
+import Trending from "./trending/page";
 
 export default function Home() {
   return (
     <Provider store={store}>
       <MusicPlayerProvider>
         <div className="">
-          <Body />
+          {/* <Body /> */}
+          <Trending />
         </div>
       </MusicPlayerProvider>
     </Provider>

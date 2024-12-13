@@ -383,7 +383,8 @@ const PlayerMusic: React.FC = () => {
         );
       };
     }
-  }, [isPlaying, currentSong, audioElement]);
+  }, [audioElement]);
+  //  isPlaying, currentSong, audioElement
 
   useEffect(() => {
     if (audioElement) {
