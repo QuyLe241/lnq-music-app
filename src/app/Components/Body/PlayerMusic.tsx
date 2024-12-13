@@ -485,16 +485,21 @@ const PlayerMusic: React.FC = () => {
               <button
                 className="btn_style_bg"
                 title="Bài trước đó"
-                // onClick={handlePrevSong}
-                // disabled={isFirstSong}
+                onClick={handlePrevSong}
+                disabled={isFirstSong}
               >
-                <BackMusicIcon width="22px" height="22px" fill="white" />
+                <BackMusicIcon
+                  onClick={handlePrevSong}
+                  width="22px"
+                  height="22px"
+                  fill="white"
+                />
               </button>
             </div>
-            <div className="flex items-center btn_style_color">
+            <div className="flex items-center">
               <button
-                className="hover:text-purple-500 "
-                // onClick={handlePlayPause}
+                className="hover:text-purple-500 btn_style_color"
+                onClick={handlePlayPause}
               >
                 {isPlaying ? (
                   <PauseIcon width="28px" height="28px" fill="white" />
@@ -507,8 +512,8 @@ const PlayerMusic: React.FC = () => {
               <button
                 className="btn_style_bg"
                 title="Bài kế tiếp"
-                // onClick={handleNextSong}
-                // disabled={isLastSong}
+                onClick={handleNextSong}
+                disabled={isLastSong}
               >
                 <NextMusicIcon width="22px" height="22px" fill="white" />
               </button>
