@@ -228,6 +228,17 @@ import { RootState } from "../reudx/store";
 import { playSong, pauseSong } from "../reudx/dataSongSlice";
 import PauseIcon from "../Components/Icon/PauseIcon";
 
+export interface Song {
+  id: number;
+  name: string;
+  singer: string;
+  view: string;
+  like: string;
+  img: string;
+  src: string;
+  up: number;
+  goiy: boolean;
+}
 const Trending: React.FC = () => {
   const dispatch = useDispatch();
   const { currentSong, isPlaying, songs } = useSelector(
