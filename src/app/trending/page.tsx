@@ -335,7 +335,6 @@ const Trending: React.FC = () => {
                                   width="25px"
                                   height="25px"
                                   fill="white"
-                                  classname=""
                                 />
                               ) : (
                                 <PlayActiveIcon
