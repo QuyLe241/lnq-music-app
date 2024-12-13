@@ -62,7 +62,7 @@
 //         );
 //       };
 //     }
-//   }, [isPlaying, currentSong, audioElement]);
+//   }, [audioElement, currentSong, isPlaying]);
 
 //   useEffect(() => {
 //     if (audioElement) {
@@ -320,7 +320,7 @@
 // export default PlayerMusic;
 
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../reudx/store";
 import {
@@ -348,15 +348,14 @@ const PlayerMusic: React.FC = () => {
   const { currentSong, isPlaying, songs } = useSelector(
     (state: RootState) => state.dataSongSlice
   );
-  const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(
-    null
-  );
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1); // Volume state (0 to 1)
-  const [isMuted, setIsMuted] = useState(false); // Mute state
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const currentTimeRef = useRef(0);
+  const durationRef = useRef(0);
+  const volumeRef = useRef(1); // Volume state (0 to 1)
+  const isMutedRef = useRef(false); // Mute state
 
   useEffect(() => {
+    const audioElement = audioRef.current;
     if (audioElement && currentSong) {
       if (isPlaying) {
         audioElement.play();
@@ -365,11 +364,11 @@ const PlayerMusic: React.FC = () => {
       }
 
       const handleTimeUpdate = () => {
-        setCurrentTime(audioElement.currentTime);
+        currentTimeRef.current = audioElement.currentTime;
       };
 
       const handleLoadedMetadata = () => {
-        setDuration(audioElement.duration);
+        durationRef.current = audioElement.duration;
       };
 
       audioElement.addEventListener("timeupdate", handleTimeUpdate);
@@ -383,14 +382,14 @@ const PlayerMusic: React.FC = () => {
         );
       };
     }
-  }, [audioElement]);
-  //  isPlaying, currentSong, audioElement
+  }, [currentSong, isPlaying]);
 
   useEffect(() => {
+    const audioElement = audioRef.current;
     if (audioElement) {
-      audioElement.volume = volume;
+      audioElement.volume = volumeRef.current;
     }
-  }, [volume, audioElement]);
+  }, []);
 
   const handlePlayPause = () => {
     if (isPlaying) {
@@ -409,17 +408,25 @@ const PlayerMusic: React.FC = () => {
   };
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setVolume(Number(e.target.value));
-    setIsMuted(Number(e.target.value) === 0);
+    volumeRef.current = Number(e.target.value);
+    isMutedRef.current = Number(e.target.value) === 0;
+    const audioElement = audioRef.current;
+    if (audioElement) {
+      audioElement.volume = volumeRef.current;
+    }
   };
 
   const toggleMute = () => {
-    if (isMuted) {
-      setVolume(1); // Unmute and set volume to 100%
-      setIsMuted(false);
+    if (isMutedRef.current) {
+      volumeRef.current = 1; // Unmute and set volume to 100%
+      isMutedRef.current = false;
     } else {
-      setVolume(0); // Mute
-      setIsMuted(true);
+      volumeRef.current = 0; // Mute
+      isMutedRef.current = true;
+    }
+    const audioElement = audioRef.current;
+    if (audioElement) {
+      audioElement.volume = volumeRef.current;
     }
   };
 
@@ -538,27 +545,28 @@ const PlayerMusic: React.FC = () => {
               className="time_player_left"
               style={{ color: "white", opacity: "0.6", fontSize: "15px" }}
             >
-              {formatTime(currentTime)}
+              {formatTime(currentTimeRef.current)}
             </span>
             <input
               className="w-4/5 time_player_style"
               type="range"
               min="0"
-              max={duration}
-              value={currentTime}
+              max={durationRef.current}
+              value={currentTimeRef.current}
               style={{
                 background: `linear-gradient(to right, #fff ${(
-                  (currentTime / duration) *
+                  (currentTimeRef.current / durationRef.current) *
                   100
                 ).toFixed(2)}%, rgba(255, 255, 255, 0.5) ${(
-                  (currentTime / duration) *
+                  (currentTimeRef.current / durationRef.current) *
                   100
                 ).toFixed(2)}%)`,
               }}
               onChange={(e) => {
+                const audioElement = audioRef.current;
                 if (audioElement) {
                   audioElement.currentTime = Number(e.target.value);
-                  setCurrentTime(Number(e.target.value));
+                  currentTimeRef.current = Number(e.target.value);
                 }
               }}
             />
@@ -566,7 +574,7 @@ const PlayerMusic: React.FC = () => {
               className="time_player_right"
               style={{ color: "white", opacity: "0.6", fontSize: "15px" }}
             >
-              {formatTime(duration)}
+              {formatTime(durationRef.current)}
             </span>
           </div>
         </div>
@@ -590,7 +598,7 @@ const PlayerMusic: React.FC = () => {
             <div className="flex items-center">
               <div className="flex items-center">
                 <button className="btn_style_bg" onClick={toggleMute}>
-                  {isMuted ? (
+                  {isMutedRef.current ? (
                     <VolumeOffIcon width="20px" height="20px" fill="white" />
                   ) : (
                     <VolumeOnIcon
@@ -609,12 +617,12 @@ const PlayerMusic: React.FC = () => {
                   min="0"
                   max="1"
                   step="0.01"
-                  value={volume}
+                  value={volumeRef.current}
                   onChange={handleVolumeChange}
                   style={{
                     background: `linear-gradient(to right, #fff ${
-                      volume * 100
-                    }%, rgba(255, 255, 255, 0.5) ${volume * 100}%)`,
+                      volumeRef.current * 100
+                    }%, rgba(255, 255, 255, 0.5) ${volumeRef.current * 100}%)`,
                   }}
                 />
               </div>
@@ -629,11 +637,7 @@ const PlayerMusic: React.FC = () => {
         </div>
       </div>
       {currentSong && (
-        <audio
-          ref={(audio) => setAudioElement(audio)}
-          src={currentSong.src}
-          onEnded={handleNextSong}
-        />
+        <audio ref={audioRef} src={currentSong.src} onEnded={handleNextSong} />
       )}
     </div>
   );

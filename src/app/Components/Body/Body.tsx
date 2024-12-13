@@ -1459,9 +1459,7 @@ const Body: React.FC = () => {
 
   return (
     <div className="container px-5" style={{ paddingBottom: "90px" }}>
-      <div className="">
-        <CarouselHome />
-      </div>
+      <div className="">{/* <CarouselHome /> */}</div>
       <div className="trend_music mt-5 py-3">
         <h3
           style={{
