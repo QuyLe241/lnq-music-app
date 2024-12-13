@@ -227,13 +227,13 @@
 
 
 // player
-.btn_style_bg {
-    padding: 8px;
-    border-radius: 50%;
-    &:hover {
-        background-color: hsl(0deg 0% 100% / 20%);
-    }
-}
+// .btn_style_bg {
+//     // padding: 8px;
+//     border-radius: 50%;
+//     &:hover {
+//         background-color: hsl(0deg 0% 100% / 20%);
+//     }
+// }
 
 .btn_style_color {
     padding: 5px;
@@ -346,4 +346,27 @@
         cursor: pointer;
         opacity: 0.8;
     }
+}
+
+.container_btn_position {
+    position: relative;
+}
+.btn_test {
+    position: absolute;
+    // background-color: red;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    padding: 10px;
+    opacity: 0;
+    background-color: hsl(0deg 0% 100% / 20%);
+    &:hover {
+        opacity: 1;
+        // background-color: hsl(0deg 0% 100% / 20%)
+    }
+
+}
+.style_posotion_icon {
+    position: absolute;
+    top: 0;
 }

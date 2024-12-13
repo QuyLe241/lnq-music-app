@@ -482,15 +482,21 @@ const PlayerMusic: React.FC = () => {
               </button>
             </div>
             <div className="flex items-center ">
-              <button
-                className="btn_style_bg"
-                style={{ zIndex: 30 }}
-                title="Bài trước đó"
-                onClick={handlePrevSong}
-                disabled={isFirstSong}
-              >
-                <BackMusicIcon width="22px" height="22px" fill="white" />
-              </button>
+              <div className="container_btn_position">
+                <BackMusicIcon
+                  classname="style_posotion_icon"
+                  width="22px"
+                  height="22px"
+                  fill="white"
+                />
+                <button
+                  className="btn_style_bg btn_test"
+                  style={{ zIndex: 30 }}
+                  title="Bài trước đó"
+                  onClick={handlePrevSong}
+                  disabled={isFirstSong}
+                ></button>
+              </div>
             </div>
             <div className="flex items-center">
               <button
@@ -506,7 +512,7 @@ const PlayerMusic: React.FC = () => {
             </div>
             <div className="flex items-center">
               <button
-                className="btn_style_bg"
+                className="btn_style_bg btn_test_next"
                 title="Bài kế tiếp"
                 onClick={handleNextSong}
                 disabled={isLastSong}
