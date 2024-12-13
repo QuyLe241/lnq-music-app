@@ -5,18 +5,16 @@ interface BackMusicIconProps {
   width: string;
   height: string;
   fill: string;
-  onClick: () => void;
 }
 const BackMusicIcon: React.FC<BackMusicIconProps> = ({
   width,
   height,
   fill,
-  onClick,
 }) => {
   return (
     <div>
       <svg
-        onClick={onClick}
+        style={{ zIndex: 20 }}
         xmlns="http://www.w3.org/2000/svg"
         width={width}
         height={height}

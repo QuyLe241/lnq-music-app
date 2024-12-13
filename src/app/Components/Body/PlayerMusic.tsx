@@ -484,16 +484,12 @@ const PlayerMusic: React.FC = () => {
             <div className="flex items-center ">
               <button
                 className="btn_style_bg"
+                style={{ zIndex: 30 }}
                 title="Bài trước đó"
                 onClick={handlePrevSong}
                 disabled={isFirstSong}
               >
-                <BackMusicIcon
-                  onClick={handlePrevSong}
-                  width="22px"
-                  height="22px"
-                  fill="white"
-                />
+                <BackMusicIcon width="22px" height="22px" fill="white" />
               </button>
             </div>
             <div className="flex items-center">
