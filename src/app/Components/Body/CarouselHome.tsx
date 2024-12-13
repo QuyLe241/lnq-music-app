@@ -13,12 +13,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 
-// Import React Slick với SSR bị tắt
-// const Slider = dynamic(() => import("react-slick"), { ssr: false });
-
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
 const CarouselHome: React.FC = () => {
   // console.log("React version:", React.version);
   return (
@@ -32,8 +26,8 @@ const CarouselHome: React.FC = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("By Lê Nhất Quý")}
+        // onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <div className="">
