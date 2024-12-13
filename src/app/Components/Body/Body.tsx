@@ -1459,7 +1459,9 @@ const Body: React.FC = () => {
 
   return (
     <div className="container px-5" style={{ paddingBottom: "90px" }}>
-      <div className="">{/* <CarouselHome /> */}</div>
+      <div className="">
+        <CarouselHome />
+      </div>
       <div className="trend_music mt-5 py-3">
         <h3
           style={{
@@ -1545,12 +1547,7 @@ const Body: React.FC = () => {
                       onClick={() => handleSongClick(item)}
                     >
                       {currentSong?.id === item.id && isPlaying ? (
-                        <PauseIcon
-                          classname=""
-                          width="18px"
-                          height="18px"
-                          fill="white"
-                        />
+                        <PauseIcon width="18px" height="18px" fill="white" />
                       ) : (
                         <PlayActiveIcon
                           width="18px"

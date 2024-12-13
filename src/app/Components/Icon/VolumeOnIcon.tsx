@@ -5,7 +5,6 @@ interface VolumeOnIconProps {
   width: string;
   height: string;
   fill: string;
-  classname: string;
 }
 const VolumeOnIcon: React.FC<VolumeOnIconProps> = ({ width, height, fill }) => {
   return (
