@@ -10,11 +10,11 @@ const TestPage: React.FC = () => {
         <h3>Đang ở page test zing chart 1</h3>
       </div>
       <div className="bg-white text-black">
-        <h3>text audio</h3>
+        <h3>test audio</h3>
         <div className="">
-          <audio controls autoPlay>
+          {/* <audio controls autoPlay>
             <source src={"/audio/testaudio.m4a"} type="audio/mp4" />
-          </audio>
+          </audio> */}
         </div>
       </div>
     </div>

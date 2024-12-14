@@ -11,7 +11,7 @@ const layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="text-white">
         <h3>Header</h3>
         <Link href={"/zingchart/test-zing-chart"}>
-          chuyển hướng đến layout kế tiếp
+          ---chuyển hướng đến layout kế tiếp ===
         </Link>
       </div>
       <div className="">{children}</div>

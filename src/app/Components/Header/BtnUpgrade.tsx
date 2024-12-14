@@ -26,7 +26,7 @@ const BtnUpgrade: React.FC = () => {
   };
   const contextValue = useMemo(() => ({ name: "Ant Design" }), []);
   return (
-    <div className="div_btnUpgrade w-1/2">
+    <div className="div_btnUpgrade">
       <Context.Provider value={contextValue}>
         {contextHolder}
 

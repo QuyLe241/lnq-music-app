@@ -37,9 +37,15 @@ const Header = () => {
             </form>
           </div>
           <div className="flex space-x-1 px-2">
-            <div className="">{/* <BtnUpgrade /> */}</div>
-            <div className="setting">{/* <Setting /> */}</div>
-            <div className="user_profile flex ">{/* <User /> */}</div>
+            <div className="">
+              <BtnUpgrade />
+            </div>
+            <div className="setting">
+              <Setting />
+            </div>
+            <div className="user_profile flex ">
+              <User />
+            </div>
           </div>
         </div>
       </div>

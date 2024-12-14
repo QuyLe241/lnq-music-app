@@ -480,23 +480,23 @@ const PlayerMusic: React.FC = () => {
               >
                 <RandomMusicIcon
                   clasName=""
-                  width="22px"
-                  height="22px"
+                  width="12px"
+                  height="12px"
                   fill="white"
                 />
               </button>
             </div>
             <div className="flex items-center">
               <button
-                className="btn_style_bg btn_test_next"
+                className="btn_style_bg"
                 title="Bài trước đó"
                 onClick={handlePrevSong}
                 disabled={isFirstSong}
               >
                 <BackMusicIcon
                   classname=""
-                  width="22px"
-                  height="22px"
+                  width="12px"
+                  height="12px"
                   fill="white"
                 />
               </button>
@@ -506,8 +506,6 @@ const PlayerMusic: React.FC = () => {
                 className="hover:text-purple-500 "
                 onClick={handlePlayPause}
               >
-                {" "}
-                {isPlaying ? "Pause" : "Play"}
                 {isPlaying ? (
                   <PauseIcon
                     classname=""
@@ -518,8 +516,8 @@ const PlayerMusic: React.FC = () => {
                 ) : (
                   <PlayActiveIcon
                     classname=""
-                    width="28px"
-                    height="28px"
+                    width="12px"
+                    height="12px"
                     fill="white"
                   />
                 )}
@@ -534,8 +532,8 @@ const PlayerMusic: React.FC = () => {
               >
                 <NextMusicIcon
                   classname=""
-                  width="22px"
-                  height="22px"
+                  width="12px"
+                  height="12px"
                   fill="white"
                 />
               </button>
@@ -545,8 +543,8 @@ const PlayerMusic: React.FC = () => {
               <button className="btn_style_bg" title="Phát lặp lại">
                 <ReplayIcon
                   clasname=""
-                  width="20px"
-                  height="20px"
+                  width="12px"
+                  height="12px"
                   fill="white"
                 />
               </button>
@@ -599,24 +597,24 @@ const PlayerMusic: React.FC = () => {
               <button className="flex items-center btn_style_bg">
                 <MicroIcon
                   classname=""
-                  width="20px"
-                  height="20px"
+                  width="12px"
+                  height="12px"
                   fill="white"
                 />
               </button>
             </div>
             <div className="flex items-center">
               <button className="btn_style_bg">
-                <ScreensIcon width="20px" height="20px" fill="white" />
+                <ScreensIcon width="12px" height="12px" fill="white" />
               </button>
             </div>
             <div className="flex items-center">
               <div className="flex items-center">
                 <button className="btn_style_bg" onClick={toggleMute}>
                   {isMuted ? (
-                    <VolumeOffIcon width="20px" height="20px" fill="white" />
+                    <VolumeOffIcon width="12px" height="12px" fill="white" />
                   ) : (
-                    <VolumeOnIcon width="20px" height="20px" fill="white" />
+                    <VolumeOnIcon width="12px" height="12px" fill="white" />
                   )}
                 </button>
               </div>
@@ -637,9 +635,9 @@ const PlayerMusic: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="lists_music flex items-center">
+            <div className="lists_music flex items-center px-1">
               <button className="btn_style_bg">
-                <ListIcon width="20px" height="20px" fill="white" />
+                <ListIcon width="15px" height="15px" fill="white" />
               </button>
             </div>
           </div>
