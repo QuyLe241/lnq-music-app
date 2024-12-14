@@ -506,6 +506,8 @@ const PlayerMusic: React.FC = () => {
                 className="hover:text-purple-500 "
                 onClick={handlePlayPause}
               >
+                {" "}
+                {isPlaying ? "Pause" : "Play"}
                 {isPlaying ? (
                   <PauseIcon
                     classname=""
