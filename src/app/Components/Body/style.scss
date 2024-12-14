@@ -227,13 +227,15 @@
 
 
 // player
-// .btn_style_bg {
-//     // padding: 8px;
-//     border-radius: 50%;
-//     &:hover {
-//         background-color: hsl(0deg 0% 100% / 20%);
-//     }
-// }
+.btn_style_bg {
+    // padding: 8px;
+    // border-radius: 50%;
+    opacity: 0.8;
+    &:hover {
+        // background-color: hsl(0deg 0% 100% / 20%);
+        opacity: 1;
+    }
+}
 
 .btn_style_color {
     // padding: 5px;
