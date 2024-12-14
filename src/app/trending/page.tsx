@@ -332,12 +332,14 @@ const Trending: React.FC = () => {
                             >
                               {currentSong?.id === item.id && isPlaying ? (
                                 <PauseIcon
+                                  classname=""
                                   width="25px"
                                   height="25px"
                                   fill="white"
                                 />
                               ) : (
                                 <PlayActiveIcon
+                                  classname=""
                                   width="25px"
                                   height="25px"
                                   fill="white"
