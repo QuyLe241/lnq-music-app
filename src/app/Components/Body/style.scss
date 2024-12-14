@@ -236,7 +236,7 @@
 // }
 
 .btn_style_color {
-    padding: 5px;
+    // padding: 5px;
     border-radius: 50%;
     // border: #fff 2px solid;
     &:hover {
@@ -355,9 +355,10 @@
     position: absolute;
     // background-color: red;
     top: 0;
-    width: 22px;
-    height: 22px;
+    width: 38px;
+    height: 38px;
     padding: 10px;
+    border-radius: 50%;
     opacity: 0;
     background-color: hsl(0deg 0% 100% / 20%);
     &:hover {
@@ -368,5 +369,8 @@
 }
 .style_posotion_icon {
     position: absolute;
-    top: 0;
+    top: 20%;
+    // left: 30%;
+    left: 8px;
+    // right: 30%;
 }

@@ -5,14 +5,16 @@ interface RandomMusicIconProps {
   width: string;
   height: string;
   fill: string;
+  clasName: string;
 }
 const RandomMusicIcon: React.FC<RandomMusicIconProps> = ({
   width,
   height,
   fill,
+  clasName,
 }) => {
   return (
-    <div>
+    <div className={clasName}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={width}

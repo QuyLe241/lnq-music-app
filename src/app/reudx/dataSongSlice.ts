@@ -227,6 +227,18 @@ interface Song {
   goiy: boolean;
 }
 
+const defaultSong: Song = {
+  id: 1,
+  name: "PICKLEBALL",
+  singer: "Đỗ Phú Quí",
+  view: "100Tr lượt xem",
+  like: "2Tr lượt thích",
+  img: "/img/pickleball-img.png",
+  src: "/audio/pickleball.m4a",
+  up: 1,
+  goiy: true,
+};
+
 interface MusicPlayerState {
   currentSong: Song | null;
   isPlaying: boolean;
@@ -236,22 +248,12 @@ interface MusicPlayerState {
 }
 
 const initialState: MusicPlayerState = {
-  currentSong: null,
+  currentSong: defaultSong,
   isPlaying: false,
   currentTime: 0,
   duration: 0,
   songs: [
-    {
-      id: 1,
-      name: "PICKLEBALL",
-      singer: "Đỗ Phú Quí",
-      view: "100Tr lượt xem",
-      like: "2Tr lượt thích",
-      img: "/img/pickleball-img.png",
-      src: "/audio/pickleball.m4a",
-      up: 1,
-      goiy: true,
-    },
+    defaultSong,
     {
       id: 2,
       name: "Têt Đông Đầy",

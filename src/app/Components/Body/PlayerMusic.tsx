@@ -473,16 +473,37 @@ const PlayerMusic: React.FC = () => {
         </div>
         <div className="btn_controls control_music_center py-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <button
+            <div className="" style={{ height: "38px" }}>
+              {/* <button
                 className="btn_control btn_style_bg"
                 title="Phát ngẫu nhiên"
               >
                 <RandomMusicIcon width="20px" height="20px" fill="white" />
-              </button>
+              </button> */}
+              <div
+                className="container_btn_position"
+                style={{ width: "", height: "100%" }}
+              >
+                <RandomMusicIcon
+                  clasName="style_posotion_icon"
+                  width="22px"
+                  height="22px"
+                  fill="white"
+                />
+                <button
+                  className="btn_style_bg btn_test"
+                  style={{ zIndex: 30 }}
+                  title="Bài trước đó"
+                  onClick={handlePrevSong}
+                  disabled={isFirstSong}
+                ></button>
+              </div>
             </div>
-            <div className="flex items-center ">
-              <div className="container_btn_position">
+            <div className=" " style={{ height: "38px" }}>
+              <div
+                className="container_btn_position"
+                style={{ height: "100%" }}
+              >
                 <BackMusicIcon
                   classname="style_posotion_icon"
                   width="22px"
@@ -498,19 +519,35 @@ const PlayerMusic: React.FC = () => {
                 ></button>
               </div>
             </div>
-            <div className="flex items-center">
-              <button
-                className="hover:text-purple-500 btn_style_color"
-                onClick={handlePlayPause}
+            <div className="" style={{ height: "38px" }}>
+              <div
+                className="container_btn_position"
+                style={{ height: "100%" }}
               >
-                {isPlaying ? (
-                  <PauseIcon width="28px" height="28px" fill="white" />
-                ) : (
-                  <PlayActiveIcon width="28px" height="28px" fill="white" />
-                )}
-              </button>
+                <button
+                  className=" btn_style_color"
+                  style={{ zIndex: 30 }}
+                  onClick={handlePlayPause}
+                >
+                  {isPlaying ? (
+                    <PauseIcon
+                      classname="style_posotion_icon"
+                      width="28px"
+                      height="28px"
+                      fill="white"
+                    />
+                  ) : (
+                    <PlayActiveIcon
+                      classname="style_posotion_icon"
+                      width="28px"
+                      height="28px"
+                      fill="white"
+                    />
+                  )}
+                </button>
+              </div>
             </div>
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <button
                 className="btn_style_bg btn_test_next"
                 title="Bài kế tiếp"
@@ -519,11 +556,49 @@ const PlayerMusic: React.FC = () => {
               >
                 <NextMusicIcon width="22px" height="22px" fill="white" />
               </button>
+            </div> */}
+            <div className=" " style={{ height: "38px" }}>
+              <div
+                className="container_btn_position"
+                style={{ height: "100%" }}
+              >
+                <NextMusicIcon
+                  classname="style_posotion_icon"
+                  width="22px"
+                  height="22px"
+                  fill="white"
+                />
+                <button
+                  className="btn_style_bg btn_test"
+                  style={{ zIndex: 30 }}
+                  title="Bài trước đó"
+                  onClick={handleNextSong}
+                  disabled={isLastSong}
+                ></button>
+              </div>
             </div>
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               <button className="btn_style_bg" title="Phát lặp lại">
                 <ReplayIcon width="20px" height="20px" fill="white" />
               </button>
+            </div> */}
+            <div className=" " style={{ height: "38px" }}>
+              <div
+                className="container_btn_position"
+                style={{ height: "100%" }}
+              >
+                <ReplayIcon
+                  clasname="style_posotion_icon"
+                  width="22px"
+                  height="22px"
+                  fill="white"
+                />
+                <button
+                  className="btn_style_bg btn_test"
+                  style={{ zIndex: 30 }}
+                  title="Phát lặp lại"
+                ></button>
+              </div>
             </div>
           </div>
           <div

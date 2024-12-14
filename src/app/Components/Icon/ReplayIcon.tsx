@@ -5,10 +5,16 @@ interface ReplayIconProps {
   width: string;
   height: string;
   fill: string;
+  clasname: string;
 }
-const ReplayIcon: React.FC<ReplayIconProps> = ({ width, height, fill }) => {
+const ReplayIcon: React.FC<ReplayIconProps> = ({
+  width,
+  height,
+  fill,
+  clasname,
+}) => {
   return (
-    <div>
+    <div className={clasname}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={width}

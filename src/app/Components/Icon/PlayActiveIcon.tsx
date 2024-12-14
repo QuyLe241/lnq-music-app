@@ -4,14 +4,16 @@ interface PlayActiveIconProps {
   width: string;
   height: string;
   fill: string;
+  classname: string;
 }
 const PlayActiveIcon: React.FC<PlayActiveIconProps> = ({
   width,
   height,
   fill,
+  classname,
 }) => {
   return (
-    <div>
+    <div className={classname}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width={width}
