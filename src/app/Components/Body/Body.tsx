@@ -1547,9 +1547,15 @@ const Body: React.FC = () => {
                       onClick={() => handleSongClick(item)}
                     >
                       {currentSong?.id === item.id && isPlaying ? (
-                        <PauseIcon width="18px" height="18px" fill="white" />
+                        <PauseIcon
+                          classname=""
+                          width="18px"
+                          height="18px"
+                          fill="white"
+                        />
                       ) : (
                         <PlayActiveIcon
+                          classname=""
                           width="18px"
                           height="18px"
                           fill="white"
