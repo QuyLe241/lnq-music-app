@@ -55,4 +55,13 @@ body {
   border-top: rgba(255, 255, 255, 0.1) 1px solid;
 }
 
+.backToTop {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  z-index: 10;
+}
+
+
+
 

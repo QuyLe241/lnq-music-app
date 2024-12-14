@@ -1418,6 +1418,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../reudx/store";
 import { playSong, pauseSong } from "../../reudx/dataSongSlice";
 import PauseIcon from "../Icon/PauseIcon";
+import BackMusicIcon from "../Icon/BackMusicIcon";
+import BackToTop from "../backtotop/BackToTop";
 
 const Body: React.FC = () => {
   const dispatch = useDispatch();
@@ -1471,8 +1473,8 @@ const Body: React.FC = () => {
           Nhạc Hot Thịnh Hành
         </h3>
         <div className="grid mt-3 gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/anh-trai-say-hi"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1551,8 +1553,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div> */}
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/hot-hit-vietnam"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1591,8 +1593,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/chon-loc"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1631,8 +1633,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/nhac-thu-gian"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1671,8 +1673,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/nhac-thu-gian"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1711,8 +1713,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/nhac-giang-sinh"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1751,8 +1753,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/nhactet"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1791,8 +1793,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"nhac-ballad"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1831,8 +1833,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/nhac-lofi"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1871,8 +1873,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/nhac-lofi"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1911,8 +1913,8 @@ const Body: React.FC = () => {
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"/nhac-giang-sinh"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1945,14 +1947,14 @@ const Body: React.FC = () => {
                 </div>
                 <div className="content py-2">
                   <p style={{ color: dataStyle.white, opacity: "0.8" }}>
-                    Những ca khúc hot trend cực hay mà bạn không thể bỏ lỡ
+                    Những ca khúc noel cực hay mà bạn không thể bỏ lỡ
                   </p>
                 </div>
               </div>
             </Link>
           </div>
-          <div className="">
-            <Link href={""}>
+          <div className="mt-2">
+            <Link href={"nhactet"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -1985,7 +1987,7 @@ const Body: React.FC = () => {
                 </div>
                 <div className="content py-2">
                   <p style={{ color: dataStyle.white, opacity: "0.8" }}>
-                    Những ca khúc hot trend cực hay mà bạn không thể bỏ lỡ
+                    Những ca khúc tết cực hay mà bạn không thể bỏ lỡ
                   </p>
                 </div>
               </div>
@@ -2295,7 +2297,7 @@ const Body: React.FC = () => {
         </div>
         <div className="grid mt-3 gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
           <div className="">
-            <Link href={""}>
+            <Link href={"top100-nhac-tre"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -2335,7 +2337,7 @@ const Body: React.FC = () => {
             </Link>
           </div>
           <div className="">
-            <Link href={""}>
+            <Link href={"top100-nhac-usuk"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -2375,7 +2377,7 @@ const Body: React.FC = () => {
             </Link>
           </div>
           <div className="">
-            <Link href={""}>
+            <Link href={"top100-edm-viet"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -2415,7 +2417,7 @@ const Body: React.FC = () => {
             </Link>
           </div>
           <div className="">
-            <Link href={""}>
+            <Link href={"top100-edm-usuk"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -2455,7 +2457,7 @@ const Body: React.FC = () => {
             </Link>
           </div>
           <div className="">
-            <Link href={""}>
+            <Link href={"top100-han-quoc"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"

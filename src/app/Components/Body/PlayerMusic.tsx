@@ -472,7 +472,7 @@ const PlayerMusic: React.FC = () => {
           </div>
         </div>
         <div className="btn_controls control_music_center py-3">
-          <div className="flex items-center justify-between">
+          <div className="flex justify-between items-center ">
             <div className="flex items-center">
               <button
                 className="btn_style_bg btn_test_next"
@@ -516,8 +516,8 @@ const PlayerMusic: React.FC = () => {
                 ) : (
                   <PlayActiveIcon
                     classname=""
-                    width="12px"
-                    height="12px"
+                    width="28px"
+                    height="28px"
                     fill="white"
                   />
                 )}
