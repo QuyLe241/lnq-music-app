@@ -237,6 +237,7 @@ export interface Song {
   img: string;
   src: string;
   up: number;
+  type: number;
   goiy: boolean;
 }
 const Trending: React.FC = () => {

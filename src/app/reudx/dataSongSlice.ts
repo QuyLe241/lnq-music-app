@@ -215,6 +215,20 @@
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+//  type
+// 1: trending
+// 2: anh trai say hi
+// 3: hothit vn
+// 4: chon loc
+// 5: chill
+// 6: giáng sinh
+// 7: tết
+// 8: ballad
+// 9: âu mỹ
+// 10: hàn quốc
+// 11: edm us-uk
+// 12: edm vietnam
+
 interface Song {
   id: number;
   name: string;
@@ -224,6 +238,7 @@ interface Song {
   img: string;
   src: string;
   up: number;
+  type: number;
   goiy: boolean;
 }
 
@@ -236,6 +251,7 @@ const defaultSong: Song = {
   img: "/img/pickleball-img.png",
   src: "/audio/pickleball.m4a",
   up: 1,
+  type: 1,
   goiy: true,
 };
 
@@ -262,7 +278,8 @@ const initialState: MusicPlayerState = {
       like: "2Tr lượt thích",
       img: "/img/tetdongday-img.png",
       src: "/audio/tetdongday.m4a",
-      up: 1,
+      up: 5,
+      type: 7,
       goiy: false,
     },
     {
@@ -273,7 +290,8 @@ const initialState: MusicPlayerState = {
       like: "10Tr lượt thích",
       img: "/img/thienlyoi-img.png",
       src: "/audio/thienlyoi.m4a",
-      up: 1,
+      up: 10,
+      type: 1,
       goiy: true,
     },
     {
@@ -284,7 +302,8 @@ const initialState: MusicPlayerState = {
       like: "2Tr lượt thích",
       img: "/img/phuongbuon-img.png",
       src: "/audio/phongbuon.m4a",
-      up: 1,
+      up: 3,
+      type: 4,
       goiy: false,
     },
     {
@@ -295,7 +314,8 @@ const initialState: MusicPlayerState = {
       like: "3.3Tr lượt thích",
       img: "/img/waitingforyou-img.png",
       src: "/audio/waitingforyou.m4a",
-      up: 1,
+      up: 6,
+      type: 3,
       goiy: true,
     },
     {
@@ -306,7 +326,8 @@ const initialState: MusicPlayerState = {
       like: "3.5Tr lượt thích",
       img: "/img/chamhoa-img.png",
       src: "/audio/chamhoa.m4a",
-      up: 1,
+      up: 2,
+      type: 3,
       goiy: false,
     },
     {
@@ -317,7 +338,8 @@ const initialState: MusicPlayerState = {
       like: "101Tr lượt thích",
       img: "/img/apt-img.png",
       src: "/audio/apt-new.m4a",
-      up: 1,
+      up: 2,
+      type: 9,
       goiy: true,
     },
     {
@@ -328,7 +350,8 @@ const initialState: MusicPlayerState = {
       like: "27.8Tr lượt thích",
       img: "/img/diewithsmile-img.png",
       src: "/audio/diewithsmile.m4a",
-      up: 1,
+      up: 10,
+      type: 9,
       goiy: false,
     },
     {
@@ -339,7 +362,8 @@ const initialState: MusicPlayerState = {
       like: "45.6Tr lượt thích",
       img: "/img/ngaongo-img.png",
       src: "/audio/ngaongo.m4a",
-      up: 1,
+      up: 8,
+      type: 2,
       goiy: true,
     },
     {
@@ -351,6 +375,7 @@ const initialState: MusicPlayerState = {
       img: "/img/saohanga-img.png",
       src: "/audio/saohanga.m4a",
       up: 1,
+      type: 2,
       goiy: false,
     },
       {
@@ -362,6 +387,7 @@ const initialState: MusicPlayerState = {
     img: "/img/banhmikhong-img.png",
     src: "/audio/banhmikhong.m4a",
     up: 1,
+    type: 3,
     goiy: false,
   },
   {
@@ -373,6 +399,7 @@ const initialState: MusicPlayerState = {
     img: "/img/senorita-img.png",
     src: "/audio/Senorita.m4a",
     up: 1,
+    type: 9,
     goiy: false,
   },
   {
@@ -384,6 +411,7 @@ const initialState: MusicPlayerState = {
     img: "/img/tinhdauquachen-img.png",
     src: "/audio/tinhdauquachen.m4a",
     up: 1,
+    type: 2,
     goiy: false,
   },
   {
@@ -395,6 +423,7 @@ const initialState: MusicPlayerState = {
     img: "/img/catchmeifyoucan-img.png",
     src: "/audio/catchmeifyoucan.m4a",
     up: 1,
+    type: 2,
     goiy: false,
   },
   {
@@ -406,6 +435,7 @@ const initialState: MusicPlayerState = {
     img: "/img/yeunam-img.png",
     src: "/audio/yeunam.m4a",
     up: 1,
+    type: 12,
     goiy: false,
   },
   {
@@ -417,6 +447,7 @@ const initialState: MusicPlayerState = {
     img: "/img/thembaonhieulau-img.png",
     src: "/audio/thembaonhieulau.m4a",
     up: 1,
+    type: 8,
     goiy: false,
   },
   {
@@ -428,6 +459,7 @@ const initialState: MusicPlayerState = {
     img: "/img/hoanhipgiangsinh-img.png",
     src: "/audio/hoanhipgiangsinh.m4a",
     up: 1,
+    type: 6,
     goiy: false,
   },
   {
@@ -439,6 +471,7 @@ const initialState: MusicPlayerState = {
     img: "/img/feded-img.png",
     src: "/audio/feded.m4a",
     up: 1,
+    type: 11,
     goiy: false,
   },
   {
@@ -450,6 +483,7 @@ const initialState: MusicPlayerState = {
     img: "/img/onmyway-img.png",
     src: "/audio/onmyway.m4a",
     up: 1,
+    type: 11,
     goiy: false,
   },
   {
@@ -461,6 +495,7 @@ const initialState: MusicPlayerState = {
     img: "/img/aloneAlanwaker-img.png",
     src: "/audio/aloneAlanWaker.m4a",
     up: 1,
+    type: 11,
     goiy: false,
   },
   {
@@ -472,6 +507,7 @@ const initialState: MusicPlayerState = {
     img: "/img/staywithme-img.png",
     src: "/audio/staywithme.m4a",
     up: 1,
+    type: 10,
     goiy: false,
   },
   {
@@ -483,6 +519,7 @@ const initialState: MusicPlayerState = {
     img: "/img/thesun-ost-img.png",
     src: "/audio/thesunOSTMV.m4a",
     up: 1,
+    type: 10,
     goiy: false,
   },
   {
@@ -494,6 +531,7 @@ const initialState: MusicPlayerState = {
     img: "/img/thislove-ost-img.png",
     src: "/audio/thienlyoi.m4a",
     up: 1,
+    type: 10,
     goiy: false,
   },
   {
@@ -505,6 +543,7 @@ const initialState: MusicPlayerState = {
     img: "/img/bacphan-img.png",
     src: "/audio/bacphan.m4a",
     up: 1,
+    type: 3,
     goiy: false,
   },
   {
@@ -516,6 +555,7 @@ const initialState: MusicPlayerState = {
     img: "/img/loinho-img.png",
     src: "/audio/loinho.m4a",
     up: 1,
+    type: 5,
     goiy: false,
   },
   {
@@ -527,6 +567,7 @@ const initialState: MusicPlayerState = {
     img: "/img/demngayxaem-img.png",
     src: "/audio/demngayxaem.m4a",
     up: 1,
+    type: 4,
     goiy: false,
   },
   {
@@ -538,6 +579,7 @@ const initialState: MusicPlayerState = {
     img: "/img/coemcho-omg.png",
     src: "/audio/coemcho.m4a",
     up: 1,
+    type: 3,
     goiy: false,
   },
   {
@@ -549,6 +591,7 @@ const initialState: MusicPlayerState = {
     img: "/img/noinaycoanh-img.png",
     src: "/audio/noinaycoanh.m4a",
     up: 1,
+    type: 3,
     goiy: false,
   },
   {
@@ -560,6 +603,7 @@ const initialState: MusicPlayerState = {
     img: "/img/thangdien-img.png",
     src: "/audio/thangdien.m4a",
     up: 1,
+    type: 4,
     goiy: false,
   },
   ],
