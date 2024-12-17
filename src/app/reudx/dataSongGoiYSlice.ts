@@ -10,6 +10,7 @@ interface Song {
   img: string;
   src: string;
   up: number;
+  type: number;
   goiy: boolean;
 }
 
@@ -23,6 +24,7 @@ const initialState:Song[] =[
     img: "/img/pickleball-img.png",
     src: "/audio/pickleball.m4a",
     up: 1,
+    type: 1,
     goiy: true,
   },
   {
@@ -33,8 +35,9 @@ const initialState:Song[] =[
     like: "2Tr lượt thích",
     img: "/img/tetdongday-img.png",
     src: "/audio/tetdongday.m4a",
-    up: 1,
-    goiy: true,
+    up: 5,
+    type: 7,
+    goiy: false,
   },
   {
     id: 3,
@@ -44,7 +47,8 @@ const initialState:Song[] =[
     like: "10Tr lượt thích",
     img: "/img/thienlyoi-img.png",
     src: "/audio/thienlyoi.m4a",
-    up: 1,
+    up: 10,
+    type: 1,
     goiy: true,
   },
   {
@@ -55,8 +59,9 @@ const initialState:Song[] =[
     like: "2Tr lượt thích",
     img: "/img/phuongbuon-img.png",
     src: "/audio/phongbuon.m4a",
-    up: 1,
-    goiy: true,
+    up: 3,
+    type: 4,
+    goiy: false,
   },
   {
     id: 5,
@@ -66,7 +71,8 @@ const initialState:Song[] =[
     like: "3.3Tr lượt thích",
     img: "/img/waitingforyou-img.png",
     src: "/audio/waitingforyou.m4a",
-    up: 1,
+    up: 6,
+    type: 3,
     goiy: true,
   },
   {
@@ -77,8 +83,9 @@ const initialState:Song[] =[
     like: "3.5Tr lượt thích",
     img: "/img/chamhoa-img.png",
     src: "/audio/chamhoa.m4a",
-    up: 1,
-    goiy: true,
+    up: 2,
+    type: 3,
+    goiy: false,
   },
   {
     id: 7,
@@ -88,7 +95,8 @@ const initialState:Song[] =[
     like: "101Tr lượt thích",
     img: "/img/apt-img.png",
     src: "/audio/apt-new.m4a",
-    up: 1,
+    up: 2,
+    type: 9,
     goiy: true,
   },
   {
@@ -99,8 +107,9 @@ const initialState:Song[] =[
     like: "27.8Tr lượt thích",
     img: "/img/diewithsmile-img.png",
     src: "/audio/diewithsmile.m4a",
-    up: 1,
-    goiy: true,
+    up: 10,
+    type: 9,
+    goiy: false,
   },
   {
     id: 9,
@@ -110,7 +119,8 @@ const initialState:Song[] =[
     like: "45.6Tr lượt thích",
     img: "/img/ngaongo-img.png",
     src: "/audio/ngaongo.m4a",
-    up: 1,
+    up: 8,
+    type: 2,
     goiy: true,
   },
   {
@@ -122,7 +132,8 @@ const initialState:Song[] =[
     img: "/img/saohanga-img.png",
     src: "/audio/saohanga.m4a",
     up: 1,
-    goiy: true,
+    type: 2,
+    goiy: false,
   },
 ]
 

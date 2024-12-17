@@ -481,7 +481,7 @@ const initialState: MusicPlayerState = {
     view: "2.9Ty lượt xem",
     like: "111Tr lượt thích",
     img: "/img/onmyway-img.png",
-    src: "/audio/onmyway.m4a",
+    src: "/audio/onmyway.m4a", 
     up: 1,
     type: 11,
     goiy: false,
