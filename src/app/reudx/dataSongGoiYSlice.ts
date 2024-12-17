@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
 interface Song {
   id: number;
@@ -10,11 +10,12 @@ interface Song {
   img: string;
   src: string;
   up: number;
+  arrowup: boolean;
   type: number;
   goiy: boolean;
 }
 
-const initialState:Song[] =[
+const initialState: Song[] = [
   {
     id: 1,
     name: "PICKLEBALL",
@@ -24,6 +25,7 @@ const initialState:Song[] =[
     img: "/img/pickleball-img.png",
     src: "/audio/pickleball.m4a",
     up: 1,
+    arrowup: true,
     type: 1,
     goiy: true,
   },
@@ -36,6 +38,7 @@ const initialState:Song[] =[
     img: "/img/tetdongday-img.png",
     src: "/audio/tetdongday.m4a",
     up: 5,
+    arrowup: true,
     type: 7,
     goiy: false,
   },
@@ -48,6 +51,7 @@ const initialState:Song[] =[
     img: "/img/thienlyoi-img.png",
     src: "/audio/thienlyoi.m4a",
     up: 10,
+    arrowup: true,
     type: 1,
     goiy: true,
   },
@@ -60,6 +64,7 @@ const initialState:Song[] =[
     img: "/img/phuongbuon-img.png",
     src: "/audio/phongbuon.m4a",
     up: 3,
+    arrowup: true,
     type: 4,
     goiy: false,
   },
@@ -71,7 +76,8 @@ const initialState:Song[] =[
     like: "3.3Tr lượt thích",
     img: "/img/waitingforyou-img.png",
     src: "/audio/waitingforyou.m4a",
-    up: 6,
+    up: 1,
+    arrowup: false,
     type: 3,
     goiy: true,
   },
@@ -84,6 +90,7 @@ const initialState:Song[] =[
     img: "/img/chamhoa-img.png",
     src: "/audio/chamhoa.m4a",
     up: 2,
+    arrowup: true,
     type: 3,
     goiy: false,
   },
@@ -96,6 +103,7 @@ const initialState:Song[] =[
     img: "/img/apt-img.png",
     src: "/audio/apt-new.m4a",
     up: 2,
+    arrowup: true,
     type: 9,
     goiy: true,
   },
@@ -108,6 +116,7 @@ const initialState:Song[] =[
     img: "/img/diewithsmile-img.png",
     src: "/audio/diewithsmile.m4a",
     up: 10,
+    arrowup: true,
     type: 9,
     goiy: false,
   },
@@ -120,6 +129,7 @@ const initialState:Song[] =[
     img: "/img/ngaongo-img.png",
     src: "/audio/ngaongo.m4a",
     up: 8,
+    arrowup: true,
     type: 2,
     goiy: true,
   },
@@ -132,17 +142,18 @@ const initialState:Song[] =[
     img: "/img/saohanga-img.png",
     src: "/audio/saohanga.m4a",
     up: 1,
+    arrowup: true,
     type: 2,
     goiy: false,
   },
-]
+];
 
 const dataSongGoiYSlice = createSlice({
   name: "dataSongGoiY",
   initialState,
-  reducers: {}
+  reducers: {},
 });
 
-export const {} = dataSongGoiYSlice.actions
+export const {} = dataSongGoiYSlice.actions;
 
-export default dataSongGoiYSlice.reducer
+export default dataSongGoiYSlice.reducer;

@@ -47,6 +47,7 @@ export interface Song {
   img: string;
   src: string;
   up: number;
+  arrowup: boolean;
   type: number;
   goiy: boolean;
 }
@@ -719,7 +720,7 @@ const Body: React.FC = () => {
         </div>
         <div className="grid mt-3 gap-3 grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
           <div className="">
-            <Link href={""}>
+            <Link href={"/chon-loc"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -752,14 +753,14 @@ const Body: React.FC = () => {
                 </div>
                 <div className="content py-2">
                   <p style={{ color: dataStyle.white, opacity: "0.8" }}>
-                    Những ca khúc chill cực hay mà bạn không thể bỏ lỡ
+                    Những ca khúc chọn lọc cực hay mà bạn không thể bỏ lỡ
                   </p>
                 </div>
               </div>
             </Link>
           </div>
           <div className="">
-            <Link href={""}>
+            <Link href={"/nhac-thu-gian"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -799,7 +800,7 @@ const Body: React.FC = () => {
             </Link>
           </div>
           <div className="">
-            <Link href={""}>
+            <Link href={"/nhac-thu-gian"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -839,7 +840,7 @@ const Body: React.FC = () => {
             </Link>
           </div>
           <div className="">
-            <Link href={""}>
+            <Link href={"/nhac-lofi"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"
@@ -872,14 +873,14 @@ const Body: React.FC = () => {
                 </div>
                 <div className="content py-2">
                   <p style={{ color: dataStyle.white, opacity: "0.8" }}>
-                    Những ca khúc chill cực hay mà bạn không thể bỏ lỡ
+                    Những ca khúc lofi cực hay mà bạn không thể bỏ lỡ
                   </p>
                 </div>
               </div>
             </Link>
           </div>
           <div className="">
-            <Link href={""}>
+            <Link href={"/nhac-thu-gian"}>
               <div className="item_music_trend">
                 <div
                   className="img_musix_trend"

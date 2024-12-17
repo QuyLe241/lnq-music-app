@@ -227,6 +227,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../reudx/store";
 import { playSong, pauseSong } from "../reudx/dataSongSlice";
 import PauseIcon from "../Components/Icon/PauseIcon";
+import CaretDown from "../Components/Icon/CaretDown";
 
 export interface Song {
   id: number;
@@ -237,6 +238,7 @@ export interface Song {
   img: string;
   src: string;
   up: number;
+  arrowup: boolean;
   type: number;
   goiy: boolean;
 }
@@ -303,7 +305,20 @@ const Trending: React.FC = () => {
                   </div>
                   <div className="on_top px-1">
                     <div className="flex justify-center items-center">
-                      <SortupIcon width="15px" height="15px " fill="#50e3c2" />
+                      {item.arrowup ? (
+                        <SortupIcon
+                          width="15px"
+                          height="15px "
+                          fill="#50e3c2"
+                        />
+                      ) : (
+                        <CaretDown
+                          classname=""
+                          width="15px"
+                          height="15px "
+                          fill="#e35050"
+                        />
+                      )}
                     </div>
                     <div className="flex justify-center items-center">
                       <span className="text-white" style={{ fontWeight: 600 }}>
