@@ -1,0 +1,123 @@
+.img_container {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    &:hover {
+        cursor: pointer;
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.img_container img {
+    transition: all 0.5s;
+}
+
+:root {
+    --color-white: #fff;
+    --purle1: rgb(194, 115, 237);
+    --opacity-background1: rgba(255, 255, 255, 0.3);
+    --opacity-background2: rgba(255, 255, 255, 0.5);
+    --opacity-background3: rgba(255, 255, 255, 0.6);
+    --opacity-background4: rgba(0, 0, 0, 0.5);
+    --opacity-background: rgba(0, 0, 0, 0.6);
+    --opacity-background5: rgba(0, 0, 0, 0.3);
+}
+
+//  bài hát
+.name_song {
+    width: 100%;
+    overflow: hidden;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.name_song span {
+    &:hover {
+        color: var(--purle1);
+    }
+}
+
+.name_singer {
+    width: 100%;
+    overflow: hidden;
+    color: var(--color-white);
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.item_music_bxh {
+    padding: 12px 3px;
+    border-radius: 5px;
+    &:hover {
+        background-color: hsl(0deg 0% 100% / 10%);
+        .btn_icon {
+            display: block;
+        }
+        .div_opacity {
+            display: block;
+        }
+        .btn_active_song {
+            display: block;
+        }
+    }
+}
+
+.item_song_trend {
+    position: relative;
+    // padding: 12px 3px;
+    // border-radius: 5px;
+}
+
+.heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    // display: none;
+}
+
+.btn_icon {
+    display: none;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+    }
+}
+
+.content_song_left {
+    position: relative;
+}
+
+.contentSong_left {
+    // height: 50px;
+    width: 100px;
+}
+
+.btn_active_song {
+    position: absolute;
+    left: 39%;
+    top: 30%;
+    opacity: 0.9;
+    display: none;
+}
+
+.div_opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--opacity-background4);
+    // opacity: ;
+    display: none;
+}
+
+
+
