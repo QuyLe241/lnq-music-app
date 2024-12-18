@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import CarouselHome from "./CarouselHome";
 import Image from "next/image";
@@ -37,6 +37,12 @@ import { playSong, pauseSong } from "../../reudx/dataSongSlice";
 import PauseIcon from "../Icon/PauseIcon";
 import BackMusicIcon from "../Icon/BackMusicIcon";
 import BackToTop from "../backtotop/BackToTop";
+import HeartFullIcon from "../Icon/HeartFullIcon";
+import {
+  saveLikedSongToLocal,
+  getLikedSongsFromLocal,
+  removeLikedSongFromLocal,
+} from "../../../localStorage/dataLocal";
 
 export interface Song {
   id: number;
@@ -52,6 +58,21 @@ export interface Song {
   goiy: boolean;
 }
 const Body: React.FC = () => {
+  const dataStyle = {
+    white: "white",
+    fontsize1: "16px",
+    fontsize2: "18px",
+    fontsize3: "20px",
+    fontsize4: "25px",
+    fontsize5: "30px",
+    fontWeigth1: 600,
+    fontWeight2: 700,
+    borderRadius1: "8px",
+    borderRadius2: "10px",
+    borderRadius3: "15px",
+    radius50pt: "50%",
+  };
+
   const dispatch = useDispatch();
   const { currentSong, isPlaying } = useSelector(
     (state: RootState) => state.dataSongSlice
@@ -80,20 +101,21 @@ const Body: React.FC = () => {
     }
   };
 
-  const dataStyle = {
-    white: "white",
-    fontsize1: "16px",
-    fontsize2: "18px",
-    fontsize3: "20px",
-    fontsize4: "25px",
-    fontsize5: "30px",
-    fontWeigth1: 600,
-    fontWeight2: 700,
-    borderRadius1: "8px",
-    borderRadius2: "10px",
-    borderRadius3: "15px",
-    radius50pt: "50%",
+  const [likedSongs, setLikedSongs] = useState<number[]>([]);
+  const handleLikeClick = (songId: number) => {
+    if (likedSongs.includes(songId)) {
+      removeLikedSongFromLocal(songId);
+      setLikedSongs(likedSongs.filter((id) => id !== songId));
+    } else {
+      saveLikedSongToLocal(songId);
+      setLikedSongs([...likedSongs, songId]);
+    }
   };
+
+  useEffect(() => {
+    const likedSongsFromLocal = getLikedSongsFromLocal();
+    setLikedSongs(likedSongsFromLocal);
+  }, []);
 
   return (
     <div className="container px-5" style={{ paddingBottom: "90px" }}>
@@ -693,12 +715,26 @@ const Body: React.FC = () => {
                   </div>
                 </div>
                 <div className="heart flex items-center">
-                  <HeartIcon
-                    width="20px"
-                    height="20px"
-                    fill="white"
-                    classname="heart_icon"
-                  />
+                  <button
+                    className="flex items-center btn_like_song"
+                    onClick={() => handleLikeClick(item.id)}
+                  >
+                    {likedSongs.includes(item.id) ? (
+                      <HeartFullIcon
+                        width="20px"
+                        height="20px"
+                        fill="#9b4de0"
+                        classname="btn_icon"
+                      />
+                    ) : (
+                      <HeartIcon
+                        width="20px"
+                        height="20px"
+                        fill="white"
+                        classname="btn_icon"
+                      />
+                    )}
+                  </button>
                 </div>
               </div>
             );

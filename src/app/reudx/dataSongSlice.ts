@@ -260,6 +260,7 @@ interface MusicPlayerState {
   isPlaying: boolean;
   currentTime: number;
   duration: number;
+  likedSongs: Song[];
   songs: Song[];
 }
 
@@ -268,6 +269,7 @@ const initialState: MusicPlayerState = {
   isPlaying: false,
   currentTime: 0,
   duration: 0,
+  likedSongs: [],
   songs: [
     defaultSong,
     {
@@ -306,7 +308,7 @@ const initialState: MusicPlayerState = {
       src: "/audio/phongbuon.m4a",
       up: 3,
       arrowup: true,
-      type: 4,
+      type: 5,
       goiy: false,
     },
     {
@@ -618,7 +620,7 @@ const initialState: MusicPlayerState = {
       src: "/audio/demngayxaem.m4a",
       up: 1,
       arrowup: true,
-      type: 4,
+      type: 5,
       goiy: false,
     },
     {
@@ -975,6 +977,13 @@ const dataSongSlice = createSlice({
     setDuration(state, action: PayloadAction<number>) {
       state.duration = action.payload;
     },
+    playLikedSongs(state, action: PayloadAction<Song[]>) {
+      state.likedSongs = action.payload;
+      if (action.payload.length > 0) {
+        state.currentSong = action.payload[0];
+        state.isPlaying = true;
+      }
+    },
   },
 });
 
@@ -985,6 +994,7 @@ export const {
   prevSong,
   setCurrentTime,
   setDuration,
+  playLikedSongs,
 } = dataSongSlice.actions;
 
 export default dataSongSlice.reducer;

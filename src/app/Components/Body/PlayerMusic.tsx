@@ -342,6 +342,7 @@ import VolumeOnIcon from "../Icon/VolumeOnIcon";
 import VolumeOffIcon from "../Icon/VolumeOffIcon";
 import ListIcon from "../Icon/ListIcon";
 import "./style.scss";
+import Link from "next/link";
 
 const PlayerMusic: React.FC = () => {
   const dispatch = useDispatch();
@@ -636,9 +637,12 @@ const PlayerMusic: React.FC = () => {
               </div>
             </div>
             <div className="lists_music flex items-center px-1">
-              <button className="btn_style_bg">
+              {/* <button className="btn_style_bg">
                 <ListIcon width="15px" height="15px" fill="white" />
-              </button>
+              </button> */}
+              <Link href={"/danh-sach-cua-ban"} className="btn_style_bg">
+                <ListIcon width="15px" height="15px" fill="white" />
+              </Link>
             </div>
           </div>
           <div className=""></div>

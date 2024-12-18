@@ -9,6 +9,7 @@ import ZingChartIcon from "../Icon/ZingChartIcon";
 import RadioIcon from "../Icon/RadioIcon";
 import RankIcon from "../Icon/RankIcon";
 import { usePathname } from "next/navigation";
+import ListIcon from "../Icon/ListIcon";
 
 const Sibar = () => {
   const pathName = usePathname();
@@ -127,16 +128,16 @@ const Sibar = () => {
 
           <div className="item_menu">
             <Link
-              href={"/comming"}
+              href={"/danh-sach-cua-ban"}
               className={`item_sibar flex pl-3 items-center ${
-                pathName === "/comming" ? " active_sibar" : ""
+                pathName === "/danh-sach-cua-ban" ? " active_sibar" : ""
               }`}
             >
               <div className="icon">
-                <RankIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
+                <ListIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
               </div>
               <div className="content">
-                <span>Comming</span>
+                <span>Của Bạn</span>
               </div>
             </Link>
           </div>
