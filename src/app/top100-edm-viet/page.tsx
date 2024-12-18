@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ChonLocImg from "../../Img/trend-img1.png";
 import Image from "next/image";
 import "./style.scss";
@@ -16,6 +16,12 @@ import SortupIcon from "../Components/Icon/SortupIcon";
 import { pauseSong, playSong } from "../reudx/dataSongSlice";
 import { edmVN } from "../../utils/dataContentListSongs";
 import CaretDown from "../Components/Icon/CaretDown";
+import {
+  saveLikedSongToLocal,
+  getLikedSongsFromLocal,
+  removeLikedSongFromLocal,
+} from "../../localStorage/dataLocal";
+import HeartFullIcon from "../Components/Icon/HeartFullIcon";
 
 export interface Song {
   id: number;
@@ -47,7 +53,20 @@ const PageNamePage: React.FC = () => {
   };
 
   const content = edmVN.content;
+  const [likedSongs, setLikedSongs] = useState<number[]>([]);
+  const handleLikeClick = (songId: number) => {
+    if (likedSongs.includes(songId)) {
+      removeLikedSongFromLocal(songId);
+      setLikedSongs(likedSongs.filter((id) => id !== songId));
+    } else {
+      saveLikedSongToLocal(songId);
+      setLikedSongs([...likedSongs, songId]);
+    }
+  };
+
   useEffect(() => {
+    const likedSongsFromLocal = getLikedSongsFromLocal();
+    setLikedSongs(likedSongsFromLocal);
     // console.log(listSongs);
     // console.log("content từ data", anhTraiSayHi);
     // console.log("content", content);
@@ -231,13 +250,25 @@ const PageNamePage: React.FC = () => {
                           </div>
                           <div className="heart flex items-center">
                             <div className="">
-                              <button className="flex items-center">
-                                <HeartIcon
-                                  width="20px"
-                                  height="20px"
-                                  fill="white"
-                                  classname="btn_icon"
-                                />
+                              <button
+                                className="flex items-center btn_like_song"
+                                onClick={() => handleLikeClick(item.id)}
+                              >
+                                {likedSongs.includes(item.id) ? (
+                                  <HeartFullIcon
+                                    width="20px"
+                                    height="20px"
+                                    fill="#9b4de0"
+                                    classname="btn_icon"
+                                  />
+                                ) : (
+                                  <HeartIcon
+                                    width="20px"
+                                    height="20px"
+                                    fill="white"
+                                    classname="btn_icon"
+                                  />
+                                )}
                               </button>
                             </div>
                             <div className="">

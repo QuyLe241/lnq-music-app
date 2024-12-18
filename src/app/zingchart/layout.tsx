@@ -9,13 +9,13 @@ const layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="text-white" style={{ paddingBottom: "90px" }}>
       <div className="text-white">
-        <h3>Header</h3>
+        <h3>Đang cập nhật</h3>
         <Link href={"/zingchart/test-zing-chart"}>
           ---chuyển hướng đến layout kế tiếp ===
         </Link>
       </div>
       <div className="">{children}</div>
-      <div className="">Footer</div>
+      <div className=""></div>
     </div>
   );
 };

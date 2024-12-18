@@ -152,7 +152,7 @@ const Sibar = () => {
                 <RankIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
               </div>
               <div className="content">
-                <span>Comming</span>
+                <span>Coming</span>
               </div>
             </Link>
           </div>
@@ -167,7 +167,7 @@ const Sibar = () => {
                 <RankIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
               </div>
               <div className="content">
-                <span>Comming</span>
+                <span>Coming</span>
               </div>
             </Link>
           </div>

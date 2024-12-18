@@ -33,12 +33,12 @@ const SetThemeModal: React.FC = () => {
         </div>
       </button>
       <Modal
-        title="Hãy chọn giao diện bạn muốn"
+        title="Chức năng đang phát triển"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
       >
-        <div className="">Theme</div>
+        <div className=""></div>
       </Modal>
     </div>
   );

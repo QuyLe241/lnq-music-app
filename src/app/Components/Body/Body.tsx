@@ -714,7 +714,7 @@ const Body: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="heart flex items-center">
+                {/* <div className="heart flex items-center">
                   <button
                     className="flex items-center btn_like_song"
                     onClick={() => handleLikeClick(item.id)}
@@ -735,7 +735,7 @@ const Body: React.FC = () => {
                       />
                     )}
                   </button>
-                </div>
+                </div> */}
               </div>
             );
           })}

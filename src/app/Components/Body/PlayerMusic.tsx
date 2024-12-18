@@ -442,7 +442,7 @@ const PlayerMusic: React.FC = () => {
       <div className="grid grid-cols-2 lg:grid-cols-3 px-3">
         <div className="control_music_left py-3 flex">
           <div
-            className="flex items-center justify-center"
+            className="flex items-center justify-center env_img_song"
             style={{ overflow: "hidden", height: "100%", width: "80px" }}
           >
             {currentSong && (
@@ -453,6 +453,13 @@ const PlayerMusic: React.FC = () => {
                 width={90}
                 height={90}
               />
+            )}
+            {isPlaying && (
+              <div className="animation_song flex justify-center items-center space-x-1">
+                <div className="animation_item item1"></div>
+                <div className="animation_item item2"></div>
+                <div className="animation_item item3"></div>
+              </div>
             )}
           </div>
           <div className="pl-2 flex items-center">
@@ -481,8 +488,8 @@ const PlayerMusic: React.FC = () => {
               >
                 <RandomMusicIcon
                   clasName=""
-                  width="12px"
-                  height="12px"
+                  width="15px"
+                  height="15px"
                   fill="white"
                 />
               </button>
@@ -496,8 +503,8 @@ const PlayerMusic: React.FC = () => {
               >
                 <BackMusicIcon
                   classname=""
-                  width="12px"
-                  height="12px"
+                  width="15px"
+                  height="15px"
                   fill="white"
                 />
               </button>
@@ -533,8 +540,8 @@ const PlayerMusic: React.FC = () => {
               >
                 <NextMusicIcon
                   classname=""
-                  width="12px"
-                  height="12px"
+                  width="15px"
+                  height="15px"
                   fill="white"
                 />
               </button>
@@ -544,8 +551,8 @@ const PlayerMusic: React.FC = () => {
               <button className="btn_style_bg" title="Phát lặp lại">
                 <ReplayIcon
                   clasname=""
-                  width="12px"
-                  height="12px"
+                  width="15px"
+                  height="15px"
                   fill="white"
                 />
               </button>
@@ -553,7 +560,7 @@ const PlayerMusic: React.FC = () => {
           </div>
           <div
             style={{ position: "relative" }}
-            className="time_player flex items-center justify-center pt-2 pb-1"
+            className="time_player flex items-center justify-center pt-3 pb-1"
           >
             <span
               className="time_player_left"
@@ -598,24 +605,24 @@ const PlayerMusic: React.FC = () => {
               <button className="flex items-center btn_style_bg">
                 <MicroIcon
                   classname=""
-                  width="12px"
-                  height="12px"
+                  width="15px"
+                  height="15px"
                   fill="white"
                 />
               </button>
             </div>
             <div className="flex items-center">
               <button className="btn_style_bg">
-                <ScreensIcon width="12px" height="12px" fill="white" />
+                <ScreensIcon width="15px" height="15px" fill="white" />
               </button>
             </div>
             <div className="flex items-center">
               <div className="flex items-center">
                 <button className="btn_style_bg" onClick={toggleMute}>
                   {isMuted ? (
-                    <VolumeOffIcon width="12px" height="12px" fill="white" />
+                    <VolumeOffIcon width="15px" height="15px" fill="white" />
                   ) : (
-                    <VolumeOnIcon width="12px" height="12px" fill="white" />
+                    <VolumeOnIcon width="15px" height="15px" fill="white" />
                   )}
                 </button>
               </div>

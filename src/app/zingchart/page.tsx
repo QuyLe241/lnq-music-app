@@ -5,7 +5,7 @@ const ZingChartPage: React.FC = () => {
   return (
     <div className="">
       <div className="">
-        <h3>Content mặc định</h3>
+        <h3></h3>
       </div>
     </div>
   );

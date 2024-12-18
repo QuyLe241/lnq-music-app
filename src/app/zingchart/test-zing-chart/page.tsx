@@ -7,10 +7,10 @@ const TestPage: React.FC = () => {
   return (
     <div className="text-white">
       <div className="">
-        <h3>Đang ở page test zing chart 1</h3>
+        <h3></h3>
       </div>
-      <div className="bg-white text-black">
-        <h3>Đang cập phát triển</h3>
+      <div className="bg-white text-black opacity-80">
+        <h3 className="text-center">Coming soon</h3>
         <div className="">
           {/* <audio controls autoPlay>
             <source src={"/audio/testaudio.m4a"} type="audio/mp4" />

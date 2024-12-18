@@ -9,6 +9,80 @@
     --opacity-background5: rgba(0, 0, 0, 0.3);
 }
 
+//  animation song
+.env_img_song {
+    position: relative;
+}
+
+.animation_song {
+    position: absolute;
+    // height: 100%;
+    height: 50%;
+    width: 100%;
+    // background-color: var(--opacity-background1);
+    
+    // animation-name: animation_song;
+    // animation-duration: 1s;
+    // animation-iteration-count: infinite;
+}
+
+.animation_item {
+    width: 8%;
+    // height: 39%;
+    border-radius: 10px;
+    background-color: var(--opacity-background2);
+    animation: animation_song 1.2s linear infinite;
+}
+
+.item1 {
+    animation-delay: 0s;
+}
+.item2 {
+    animation-delay: 0.2s;
+}
+.item3 {
+    animation-delay: 0.5s;
+}
+
+@keyframes animation_song {
+    0% {
+        height: 1px;
+        // margin-top: 0;
+      }
+    10% {
+        // height: 40px;
+        height: 50%;
+        // margin-top: -40%;
+        // margin-top: -40px;
+        // margin-top: 0;
+      }
+      50% {
+        // height: 20px;
+        height: 20%;
+        // margin-top: -20%;
+        // margin-top: -20px;
+        // margin-top: 0;
+      }
+      60% {
+        // height: 30px;
+        height: 60%;
+        // margin-top: -30%;
+        // margin-top: -30px;
+        // margin-top: 0;
+      }
+      80% {
+        // height: 60px;
+        height: 90%;
+        // margin-top: -60%;
+        // margin-top: -60px;
+        // margin-top: 0;
+      }
+      100% {
+        height: 1px;
+        // margin-top: 0;
+      }
+}
+
 .img_musix_trend {
     position: relative;
 }
@@ -228,7 +302,7 @@
 
 // player
 .btn_style_bg {
-    padding: 20px;
+    padding: 18px;
     border-radius: 50%;
     opacity: 0.8;
     &:hover {

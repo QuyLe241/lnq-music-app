@@ -223,7 +223,11 @@ import React, { useEffect, useState } from "react";
 import { Empty } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../reudx/store";
-import { getLikedSongsFromLocal } from "../../localStorage/dataLocal";
+import {
+  saveLikedSongToLocal,
+  getLikedSongsFromLocal,
+  removeLikedSongFromLocal,
+} from "../../localStorage/dataLocal";
 import "./style.scss";
 import Image from "next/image";
 import PlayActiveIcon from "../Components/Icon/PlayActiveIcon";
@@ -234,6 +238,7 @@ import MicroIcon from "../Components/Icon/MicroIcon";
 import Dots from "../Components/Icon/Dots";
 import SortupIcon from "../Components/Icon/SortupIcon";
 import CaretDown from "../Components/Icon/CaretDown";
+import HeartFullIcon from "../Components/Icon/HeartFullIcon";
 
 interface Song {
   id: number;
@@ -275,6 +280,25 @@ const PageNamePage: React.FC = () => {
   const handlePlayAllClick = () => {
     dispatch(playLikedSongs(likedSongsDetails));
   };
+
+  // const [likedSongs, setLikedSongs] = useState<number[]>([]);
+  const handleLikeClick = (songId: number) => {
+    if (likedSongs.includes(songId)) {
+      removeLikedSongFromLocal(songId);
+      setLikedSongs(likedSongs.filter((id) => id !== songId));
+    } else {
+      saveLikedSongToLocal(songId);
+      setLikedSongs([...likedSongs, songId]);
+    }
+  };
+
+  useEffect(() => {
+    const likedSongsFromLocal = getLikedSongsFromLocal();
+    setLikedSongs(likedSongsFromLocal);
+    // console.log(listSongs);
+    // console.log("content từ data", anhTraiSayHi);
+    // console.log("content", content);
+  }, []);
 
   return (
     <div className="pb-[90px] px-3">
@@ -418,13 +442,25 @@ const PageNamePage: React.FC = () => {
                     </div>
                     <div className="heart flex items-center">
                       <div className="">
-                        <button className="flex items-center">
-                          <HeartIcon
-                            width="20px"
-                            height="20px"
-                            fill="white"
-                            classname="btn_icon"
-                          />
+                        <button
+                          className="flex items-center btn_like_song"
+                          onClick={() => handleLikeClick(song.id)}
+                        >
+                          {likedSongs.includes(song.id) ? (
+                            <HeartFullIcon
+                              width="20px"
+                              height="20px"
+                              fill="#9b4de0"
+                              classname="btn_icon"
+                            />
+                          ) : (
+                            <HeartIcon
+                              width="20px"
+                              height="20px"
+                              fill="white"
+                              classname="btn_icon"
+                            />
+                          )}
                         </button>
                       </div>
                       <div className="">
