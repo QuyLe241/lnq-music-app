@@ -10,6 +10,7 @@ import RadioIcon from "../Icon/RadioIcon";
 import RankIcon from "../Icon/RankIcon";
 import { usePathname } from "next/navigation";
 import ListIcon from "../Icon/ListIcon";
+import KeyIcon from "../Icon/KeyIcon";
 
 const Sibar = () => {
   const pathName = usePathname();
@@ -143,24 +144,29 @@ const Sibar = () => {
           </div>
           <div className="item_menu">
             <Link
-              href={"/comming"}
+              href={"/admin-login"}
               className={`item_sibar flex pl-3 items-center ${
-                pathName === "/comming" ? " active_sibar" : ""
+                pathName === "/admin-login" ? " active_sibar" : ""
               }`}
             >
               <div className="icon">
-                <RankIcon width={"20px"} height={"20px"} fill={"#d8d8d8"} />
+                <KeyIcon
+                  classname=""
+                  width={"20px"}
+                  height={"20px"}
+                  fill={"#d8d8d8"}
+                />
               </div>
               <div className="content">
-                <span>Coming</span>
+                <span>ADMIN</span>
               </div>
             </Link>
           </div>
           <div className="item_menu">
             <Link
-              href={"/comming"}
+              href={"/coming"}
               className={`item_sibar flex pl-3 items-center ${
-                pathName === "/comming" ? " active_sibar" : ""
+                pathName === "/coming" ? " active_sibar" : ""
               }`}
             >
               <div className="icon">

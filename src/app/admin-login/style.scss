@@ -1,0 +1,13 @@
+.btn_login {
+    background-color: #9b4de0;
+    color: white;
+    font-weight: 600;
+    opacity: 0.9;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.input_key input {
+    opacity: 0.9;
+}
