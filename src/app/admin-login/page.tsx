@@ -81,7 +81,7 @@ const PageNamePage: React.FC = () => {
               <input
                 type="text"
                 className="w-5/6 rounded-xl focus:outline-none p-2"
-                placeholder="Nhặp Key"
+                placeholder="Nhập Key"
                 value={key}
                 onChange={handleInputChange}
               />
