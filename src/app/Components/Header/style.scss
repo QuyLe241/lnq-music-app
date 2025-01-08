@@ -73,9 +73,10 @@
 }
 
 .link_social {
-    opacity: 0.6;
+    opacity: 0.9;
     transition: all 0.3s;
-    color: black;
+    // color: black;
+    color: rgb(38, 33, 33);
     &:hover {
         opacity: 1;
         color: black;

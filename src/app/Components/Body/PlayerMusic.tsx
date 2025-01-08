@@ -498,7 +498,7 @@ const PlayerMusic: React.FC = () => {
               <button
                 className="btn_style_bg"
                 title="Bài trước đó"
-                onClick={handlePrevSong}
+                // onClick={handlePrevSong}
                 disabled={isFirstSong}
               >
                 <BackMusicIcon
@@ -535,7 +535,7 @@ const PlayerMusic: React.FC = () => {
               <button
                 className="btn_style_bg btn_test_next"
                 title="Bài kế tiếp"
-                onClick={handleNextSong}
+                // onClick={handleNextSong}
                 disabled={isLastSong}
               >
                 <NextMusicIcon

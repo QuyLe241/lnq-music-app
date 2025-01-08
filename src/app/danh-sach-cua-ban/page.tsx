@@ -322,7 +322,10 @@ const PageNamePage: React.FC = () => {
           )}
         </div>
       </div>
-      {likedSongsDetails.length === 0 ? (
+      <div className="empty_data">
+        <Empty className="" description="Chưa Có Bài Hát Nào" />
+      </div>
+      {/* {likedSongsDetails.length === 0 ? (
         <div className="empty_data">
           <Empty className="" description="Chưa Có Bài Hát Nào" />
         </div>
@@ -490,7 +493,7 @@ const PageNamePage: React.FC = () => {
             </div>
           ))}
         </div>
-      )}
+      )} */}
     </div>
   );
 };
