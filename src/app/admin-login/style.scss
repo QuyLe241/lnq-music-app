@@ -14,3 +14,13 @@
 .input_key input {
     opacity: 0.9;
 }
+
+.input_key {
+    position: relative;
+}
+
+.icon_show {
+    position: absolute;
+    right: 10%;
+    top: 10px;
+}

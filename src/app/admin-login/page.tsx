@@ -8,9 +8,13 @@ import { ToastContainer } from "react-toastify";
 import { AppProps } from "next/app";
 import { saveKey, getKey } from "../../localStorage/auth";
 import { string } from "yup";
+import ViewIcon from "../Components/Icon/ViewIcon";
+import ViewSlashIcon from "../Components/Icon/ViewSlashIcon";
 
 const PageNamePage: React.FC = () => {
   const [key, setKey] = useState<string>("");
+
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setKey(e.target.value);
@@ -34,7 +38,7 @@ const PageNamePage: React.FC = () => {
       });
       setTimeout(() => {
         window.location.href = "/admin";
-      }, 1000);
+      }, 500);
     } else {
       toast.error("Key không chính xác", {
         position: "top-right",
@@ -61,6 +65,11 @@ const PageNamePage: React.FC = () => {
     }
   }, []);
 
+  // handle button show password
+  const handlePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div className="pb-[92px]">
       <div className="">
@@ -77,14 +86,29 @@ const PageNamePage: React.FC = () => {
         </div>
         <div className="mt-2 pt-3">
           <form className="" onSubmit={handleFormSubmit}>
-            <div className="flex justify-center w-full input_key">
+            <div className="flex justify-center w-full input_key ">
               <input
-                type="text"
+                type={showPassword ? "text" : "password"}
                 className="w-5/6 rounded-xl focus:outline-none p-2"
                 placeholder="Nhập Key"
                 value={key}
                 onChange={handleInputChange}
               />
+              <div className="icon_show">
+                <button
+                  className="opacity-80 hover:opacity-100"
+                  type="button"
+                  onClick={() => {
+                    handlePassword();
+                  }}
+                >
+                  {showPassword ? (
+                    <ViewSlashIcon width="20px" height="20px" fill="" />
+                  ) : (
+                    <ViewIcon width="20px" height="20px" fill="" />
+                  )}
+                </button>
+              </div>
             </div>
             <div className="flex justify-center mt-3">
               <button

@@ -11,7 +11,11 @@ const PageNamePage: React.FC = () => {
     }
   }, []);
   console.log("");
-  return <div className="">page</div>;
+  return (
+    <div className="">
+      <h3 className="text-white text-center">XIN CHÀO ADMIN</h3>
+    </div>
+  );
 };
 
 export default PageNamePage;
